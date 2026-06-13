@@ -225,19 +225,34 @@ section { padding: 120px 0; }
 
 .story-panels { position: relative; }
 
-/* Desktop: sticky */
+/* ── Desktop: avatar fijo en la derecha durante toda la página ── */
 @media (min-width: 769px) {
+  /* Avatar: fixed en el lado derecho, siempre visible al hacer scroll */
+  .story-right {
+    position: fixed;
+    right: 0; top: 0;
+    width: 44vw; height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    background: transparent;
+    border: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .9s cubic-bezier(.4,0,.2,1);
+    z-index: 20;
+  }
+  /* Se muestra cuando el hero sale de pantalla */
+  .story-right.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Story panels: columna izquierda ocupa el 56% restante */
   .story-panels {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 56fr 44fr;
   }
   .story-left { position: relative; }
-  .story-right {
-    position: sticky; top: 0; height: 100vh;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    background: var(--surface);
-    border-left: 1px solid var(--border);
-  }
+
   .story-phase {
     height: 100vh;
     display: flex; flex-direction: column; justify-content: center;
@@ -246,6 +261,19 @@ section { padding: 120px 0; }
     opacity: .3; transition: opacity .6s;
   }
   .story-phase.active { opacity: 1; }
+
+  /* Todas las secciones bajo el hero dejan espacio para el avatar */
+  .numbers-strip,
+  .story-intro,
+  #how,
+  #benefits,
+  #pricing,
+  #comparison,
+  #timeline,
+  #testimonials,
+  #faq {
+    padding-right: 44vw;
+  }
 }
 
 /* Mobile: tarjetas verticales */
@@ -270,37 +298,44 @@ section { padding: 120px 0; }
 .story-phase h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--text); margin-bottom: 16px; }
 .story-phase p  { color: var(--text-muted); font-size: 15px; max-width: 420px; }
 
-/* Contenedor de avatar */
+/* Contenedor de avatar — integrado, sin cápsula */
 .avatar-container {
-  width: 100%; height: 100vh;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
   position: relative; overflow: hidden;
-  padding: 40px 24px;
+  padding: 0;
 }
 .avatar-smoke {
   position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(ellipse 60% 70% at 50% 60%, rgba(92,143,110,.06) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 50% at 30% 30%, rgba(201,168,112,.04) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(92,143,110,.10) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 30% at 50% 100%, rgba(8,8,8,1) 0%, transparent 40%);
 }
 .avatar-slot {
   position: relative; z-index: 1;
-  width: min(260px, 100%); aspect-ratio: 1/1.8;
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 32px;
+  width: 100%; height: 100%;
+  display: flex; align-items: flex-end; justify-content: center;
+  margin-bottom: 0;
 }
 .avatar-video-area {
   width: 100%; height: 100%;
-  border-radius: 120px;
-  background: var(--surface2);
+  border-radius: 0;
+  background: transparent;
   overflow: hidden; position: relative;
+  /* Máscara: desvanece los bordes — elimina el cuadrado visible */
+  mask-image:
+    radial-gradient(ellipse 82% 88% at 50% 55%, black 30%, rgba(0,0,0,.7) 58%, transparent 100%);
+  -webkit-mask-image:
+    radial-gradient(ellipse 82% 88% at 50% 55%, black 30%, rgba(0,0,0,.7) 58%, transparent 100%);
 }
 .avatar-video-area video {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover;
-  border-radius: 120px;
-  transition: opacity 1.2s cubic-bezier(.4,0,.2,1);
+  object-fit: contain;
+  object-position: center 30%;
+  border-radius: 0;
+  /* Sin transition — el scroll controla el tiempo directamente */
+  transition: opacity .6s cubic-bezier(.4,0,.2,1);
 }
 .avatar-video-area video.v-volumen  { opacity: 1; z-index: 1; }
 .avatar-video-area video.v-atletico { opacity: 0; z-index: 2; }
