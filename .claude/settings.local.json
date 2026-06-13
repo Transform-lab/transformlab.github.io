@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__visualize__read_me",
+      "mcp__Claude_Preview__preview_start",
+      "PowerShell(\\(Get-Command node -ErrorAction SilentlyContinue\\).Source; \\(Get-Command npx -ErrorAction SilentlyContinue\\).Source; \\(Get-Command python -ErrorAction SilentlyContinue\\).Source)",
+      "PowerShell(Get-Command node,npm,npx,python3,py,php -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command node.exe,npm.cmd,npx.cmd -ErrorAction SilentlyContinue | Select-Object Name,Source; $env:PATH -split ';' | Where-Object { $_ -match 'node|npm' })",
+      "Bash(where node *)",
+      "Bash(where.exe powershell *)",
+      "Bash(powershell -Command \"Get-Command node -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")"
+    ]
+  }
+}

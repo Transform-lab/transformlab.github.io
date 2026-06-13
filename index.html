@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- TODO: cambia el title y description por los de tu marca real -->
+  <title>Transform·Lab — Te pagamos por adelgazar</title>
+  <meta name="description"
+        content="Programa de transformación corporal con fianza reembolsable. Cumple tus objetivos semanales y recupera hasta 199 € mientras transformas tu cuerpo.">
+
+  <!-- Open Graph (compartir en redes) -->
+  <!-- TODO: sustituye og:url, og:image y og:site_name por los de tu dominio real -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://tusitio.com/">
+  <meta property="og:title"       content="Transform·Lab — Te pagamos por adelgazar">
+  <meta property="og:description" content="Cumple tus objetivos semanales y recupera hasta 199 € de fianza. Plan de alimentación + entrenamiento personalizado.">
+  <meta property="og:image"       content="https://tusitio.com/assets/og-image.jpg">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Favicon -->
+  <!-- TODO: añade tu favicon real en /assets/favicon.ico -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+  <!-- Tipografías: Bricolage Grotesque (títulos) · Hanken Grotesk (cuerpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=Hanken+Grotesk:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Estilos críticos inline: garantizan fondo y texto visibles aunque el CSS externo falle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #080808; color: #f0ede8; font-family: system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+
+  <!-- Efecto de luz que sigue el cursor (solo desktop) -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════
+       NAVEGACIÓN FIJA
+  ════════════════════════════ -->
+  <header>
+    <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+      <div class="nav-inner">
+        <!-- TODO: cambia el nombre de la marca -->
+        <a href="#" class="logo">Transform<span>·</span>Lab</a>
+        <a href="#pricing" class="nav-cta">Empezar ahora</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ════════════════════════════
+         HERO
+    ════════════════════════════ -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg"   aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="hero-inner">
+
+          <!-- Columna izquierda: texto -->
+          <div class="hero-text-col">
+            <!-- TODO: ajusta el badge si cambias el estado de lanzamiento -->
+            <div class="hero-badge" aria-label="Estado de oferta">
+              <span class="hero-badge-dot" aria-hidden="true"></span>
+              Oferta de lanzamiento disponible
+            </div>
+
+            <h1 id="hero-heading" class="hero-title">
+              Te pagamos<br>por adelgazar.
+            </h1>
+
+            <p class="hero-sub">
+              Entra en nuestro programa de alimentación y entrenamiento, cumple
+              tus objetivos semanales y recupera tu fianza mientras transformas
+              tu cuerpo.
+            </p>
+            <p class="hero-meta">
+              No se trata de motivación pasajera. Se trata de un sistema diseñado
+              para que cumplas.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#pricing" class="btn-primary">Quiero empezar mi cambio</a>
+              <a href="#how"     class="btn-secondary">Ver cómo funciona</a>
+            </div>
+
+            <ul class="hero-trust" aria-label="Garantías del programa">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Objetivos realistas
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Seguimiento semanal
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Fianza reembolsable según cumplimiento
+              </li>
+            </ul>
+          </div>
+
+          <!-- Columna derecha: escultura (solo desktop) -->
+          <div class="hero-image-col" aria-hidden="true">
+            <img
+              src="assets/escultura-transformacion.png"
+              alt=""
+              class="hero-sculpture"
+              loading="eager"
+              decoding="async">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         NÚMEROS CLAVE
+    ════════════════════════════ -->
+    <!-- TODO: actualiza estas cifras si cambias el precio o la duración del reto -->
+    <div class="numbers-strip" aria-label="Datos clave del programa">
+      <div class="container">
+        <ul class="numbers-grid" style="list-style:none">
+          <li class="number-item reveal">
+            <div class="num">50<span>€</span></div>
+            <div class="desc">Precio de lanzamiento</div>
+          </li>
+          <li class="number-item reveal reveal-delay-1">
+            <div class="num">199<span>€</span></div>
+            <div class="desc">Fianza recuperable</div>
+          </li>
+          <li class="number-item reveal reveal-delay-2">
+            <div class="num">8</div>
+            <div class="desc">Semanas de reto</div>
+          </li>
+          <li class="number-item reveal reveal-delay-3">
+            <div class="num">100<span>%</span></div>
+            <div class="desc">Recuperable si cumples</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════
+         SCROLL STORY + AVATAR TURNTABLE
+    ════════════════════════════ -->
+    <section id="story" aria-labelledby="story-heading">
+      <div class="story-intro container reveal">
+        <span class="label label-line">Tu transformación</span>
+        <h2 id="story-heading">
+          Adelgazar ya no depende solo de motivación.<br>
+          Depende de un sistema.
+        </h2>
+        <p>Cuatro fases. Un objetivo claro. Una fianza que te mantiene
+           comprometido en cada paso.</p>
+      </div>
+
+      <div class="story-panels" id="storyPanels">
+
+        <!-- Columna izquierda: fases de texto -->
+        <div class="story-left" id="storyLeft">
+
+          <div class="story-phase active" data-phase="0" data-phase-label="Hoy">
+            <div class="phase-number" aria-hidden="true">Fase 01</div>
+            <h3>Hoy</h3>
+            <p>Empiezas con ganas de cambiar, pero necesitas algo más que
+               motivación. Necesitas estructura, seguimiento y un motivo real
+               para no abandonar.</p>
+          </div>
+
+          <div class="story-phase" data-phase="1" data-phase-label="Semana 1–2">
+            <div class="phase-number" aria-hidden="true">Fase 02</div>
+            <h3>Semana 1–2</h3>
+            <p>Definimos tu objetivo. Recibes tu plan de alimentación y
+               entrenamiento personalizado. Activas tu compromiso con la fianza.</p>
+          </div>
+
+          <div class="story-phase" data-phase="2" data-phase-label="Semana 3–5">
+            <div class="phase-number" aria-hidden="true">Fase 03</div>
+            <h3>Semana 3–5</h3>
+            <p>Cada semana cuenta. Si cumples tu objetivo semanal, recuperas
+               una parte de tu fianza. El sistema trabaja a tu favor.</p>
+          </div>
+
+          <div class="story-phase" data-phase="3" data-phase-label="Tu transformación">
+            <div class="phase-number" aria-hidden="true">Fase 04</div>
+            <h3>Tu transformación</h3>
+            <p>Cumples tu objetivo, recuperas tu fianza y construyes una nueva
+               versión de ti. Sin promesas vacías. Con resultados medibles.</p>
+          </div>
+
+        </div><!-- /story-left -->
+
+        <!-- Columna derecha: avatar sticky -->
+        <div class="story-right" id="storyRight" aria-hidden="true">
+          <div class="avatar-container">
+            <div class="avatar-smoke"></div>
+
+            <div class="avatar-slot">
+              <div class="avatar-video-area" id="avatarSlot">
+
+                <!--
+                  VÍDEO 1 — cuerpo con volumen (antes)
+                  Coloca tu archivo en: assets/turntable-volumen.mp4
+                  Poster: assets/poster-volumen.jpg  (captura del primer frame)
+                  TODO: añade también la versión WebM para mejor compresión:
+                        assets/turntable-volumen.webm
+                -->
+                <video
+                  class="v-volumen"
+                  id="videoVolumen"
+                  autoplay muted loop playsinline
+                  preload="auto"
+                  poster="assets/poster-volumen.jpg">
+                  <!-- TODO: añade fuente WebM cuando dispongas de ella -->
+                  <!-- <source src="assets/turntable-volumen.webm" type="video/webm"> -->
+                  <source src="assets/turntable-volumen.mp4"  type="video/mp4">
+                </video>
+
+                <!--
+                  VÍDEO 2 — cuerpo atlético (después)
+                  Coloca tu archivo en: assets/turntable-atletico.mp4
+                  Poster: assets/poster-atletico.jpg
+                  TODO: añade también assets/turntable-atletico.webm
+                -->
+                <video
+                  class="v-atletico"
+                  id="videoAtletico"
+                  autoplay muted loop playsinline
+                  preload="auto"
+                  poster="assets/poster-atletico.jpg">
+                  <!-- TODO: añade fuente WebM cuando dispongas de ella -->
+                  <!-- <source src="assets/turntable-atletico.webm" type="video/webm"> -->
+                  <source src="assets/turntable-atletico.mp4"  type="video/mp4">
+                </video>
+
+              </div><!-- /avatar-video-area -->
+            </div><!-- /avatar-slot -->
+
+            <!-- Barra de progreso animada -->
+            <!-- TODO: ajusta peso inicial / objetivo si son distintos -->
+            <div class="avatar-progress">
+              <div class="progress-row">
+                <span>Peso inicial</span>
+                <strong id="weightDisplay">95 kg</strong>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" id="weightBar"></div>
+              </div>
+              <div class="progress-row" style="margin-top:4px">
+                <span>Objetivo</span>
+                <strong>90 kg</strong>
+              </div>
+              <div class="fianza-recovered" id="fianzaDisplay">
+                <div>
+                  <div class="label-small">Fianza recuperada</div>
+                </div>
+                <div class="amount" id="fianzaAmount">0 €</div>
+              </div>
+            </div>
+
+          </div><!-- /avatar-container -->
+        </div><!-- /story-right -->
+
+      </div><!-- /story-panels -->
+    </section>
+
+    <!-- ════════════════════════════
+         CÓMO FUNCIONA
+    ════════════════════════════ -->
+    <section id="how" aria-labelledby="how-heading">
+      <div class="container">
+        <span class="label label-line reveal">Cómo funciona</span>
+        <h2 id="how-heading" class="reveal">Un sistema en cuatro pasos.</h2>
+
+        <ol class="steps" style="list-style:none">
+          <li class="step reveal">
+            <div class="step-num" aria-hidden="true">01</div>
+            <h3>Definimos tu objetivo</h3>
+            <p>Analizamos tu situación inicial y marcamos una meta realista
+               según tu peso, hábitos, tiempo disponible y nivel físico.</p>
+          </li>
+          <li class="step reveal reveal-delay-1">
+            <div class="step-num" aria-hidden="true">02</div>
+            <h3>Recibes tu plan personalizado</h3>
+            <p>Te entregamos un plan de alimentación y entrenamiento adaptado
+               a ti, con seguimiento semanal incluido.</p>
+          </li>
+          <li class="step reveal reveal-delay-2">
+            <div class="step-num" aria-hidden="true">03</div>
+            <h3>Dejas una fianza de compromiso</h3>
+            <!-- TODO: actualiza el importe de la fianza si cambia -->
+            <p>La fianza no es un castigo. Es una herramienta para ayudarte
+               a mantenerte firme cuando la motivación baja.</p>
+          </li>
+          <li class="step reveal reveal-delay-3">
+            <div class="step-num" aria-hidden="true">04</div>
+            <h3>Cumples y recuperas</h3>
+            <p>Cada semana que alcanzas el objetivo acordado, recuperas una
+               parte proporcional de tu fianza. Así de claro.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         PRECIO / OFERTA
+    ════════════════════════════ -->
+    <section id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="pricing-header reveal">
+          <!-- TODO: retira o actualiza este badge cuando termine el lanzamiento -->
+          <div class="launch-badge">Oferta de lanzamiento</div>
+          <!-- TODO: actualiza los precios -->
+          <h2 id="pricing-heading">
+            Empieza por 50 €.<br>Recupera hasta 199 € si cumples.
+          </h2>
+          <p style="margin-top:16px; max-width:500px; margin-left:auto; margin-right:auto;">
+            La fianza no es un pago perdido. Es tu compromiso convertido
+            en acción.
+          </p>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="pricing-top">
+            <div class="pricing-title-area">
+              <div>
+                <h3>Programa completo de transformación</h3>
+                <p style="font-size:13px; margin-top:6px;">
+                  Plan de alimentación + plan de entrenamiento + sistema de fianza
+                </p>
+              </div>
+              <div class="price-display">
+                <!-- TODO: actualiza valor real y precio de lanzamiento -->
+                <div class="price-was">Valor real 139 €</div>
+                <div class="price-now"><sup>€</sup>50</div>
+                <div class="price-note">precio de lanzamiento</div>
+              </div>
+            </div>
+
+            <!-- TODO: ajusta cada línea de precio si cambian los importes -->
+            <dl class="line-items">
+              <div class="line-item">
+                <dt class="li-name">Plan de alimentación personalizado</dt>
+                <dd class="li-price">36 €</dd>
+              </div>
+              <div class="line-item">
+                <dt class="li-name">Plan de entrenamiento adaptado</dt>
+                <dd class="li-price">14 €</dd>
+              </div>
+              <div class="line-item li-fianza">
+                <dt class="li-name">Fianza de compromiso reembolsable</dt>
+                <dd class="li-price">199 €</dd>
+              </div>
+              <div class="line-item li-total">
+                <dt class="li-name">Total inicial</dt>
+                <dd class="li-price">249 €</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="pricing-bottom">
+            <div class="recovery-callout">
+              <div class="recovery-icon" aria-hidden="true">↩</div>
+              <p>
+                <!-- TODO: actualiza los importes de recuperación -->
+                <strong>Puedes recuperar hasta 199 €.</strong> Si cumples
+                todos los objetivos, tu coste final real es solo 50 €.
+                Cada semana que cumples, recuperas parte de tu fianza.
+              </p>
+            </div>
+            <div class="pricing-cta-area">
+              <!-- TODO: enlaza el botón al formulario o pasarela de pago real -->
+              <a href="#final-cta" class="btn-primary">Quiero entrar al reto</a>
+              <p class="pricing-cta-note">
+                Objetivos definidos antes de empezar · Condiciones transparentes
+              </p>
+            </div>
+          </div>
+        </div><!-- /pricing-card -->
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         EJEMPLO PRÁCTICO
+    ════════════════════════════ -->
+    <section id="example" aria-labelledby="example-heading">
+      <div class="container">
+        <span class="label label-line reveal">Ejemplo real del sistema</span>
+        <h2 id="example-heading" class="reveal">Así funciona en la práctica.</h2>
+
+        <div class="example-grid">
+          <!-- Timeline -->
+          <!-- TODO: estos datos son de ejemplo; ajusta semanas, kg y € a tu reto real -->
+          <ol class="example-timeline reveal" style="list-style:none">
+            <li class="timeline-item">
+              <div class="timeline-left" aria-hidden="true">
+                <div class="timeline-dot active"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-week">Inicio del programa</div>
+                <p class="timeline-desc">Defines tu objetivo: perder hasta 5 kg en 8 semanas. Recibes tu plan y activas la fianza de 199 €.</p>
+                <div class="timeline-amount">Fianza: 199 €</div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-left" aria-hidden="true">
+                <div class="timeline-dot active"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-week">Semanas 1–2 cumplidas</div>
+                <p class="timeline-desc">Cumples el objetivo semanal. Llevas −1 kg. Recuperas aproximadamente 25 € cada semana.</p>
+                <div class="timeline-amount">Recuperado: ~50 €</div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-left" aria-hidden="true">
+                <div class="timeline-dot active"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-week">Semanas 3–5 cumplidas</div>
+                <p class="timeline-desc">Sigues avanzando. Llevas −3 kg. El sistema recompensa tu constancia semana a semana.</p>
+                <div class="timeline-amount">Recuperado: ~125 €</div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-left" aria-hidden="true">
+                <div class="timeline-dot active"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-week">Semana 8 — objetivo cumplido</div>
+                <p class="timeline-desc">Alcanzas tu objetivo. Llevas −5 kg. Recuperas el total de tu fianza.</p>
+                <div class="timeline-amount">Recuperado: 199 € · Coste real: 50 €</div>
+              </div>
+            </li>
+          </ol>
+
+          <!-- Resumen sticky -->
+          <aside class="example-summary reveal reveal-delay-2" aria-label="Resumen del reto de ejemplo">
+            <div class="summary-header">
+              <h4>Resumen del reto</h4>
+              <!-- TODO: indica que son datos de ejemplo -->
+              <p>Datos orientativos del ejemplo</p>
+            </div>
+            <dl class="summary-rows">
+              <div class="summary-row">
+                <dt class="sr-label">Duración</dt>
+                <dd class="sr-value">8 semanas</dd>
+              </div>
+              <div class="summary-row">
+                <dt class="sr-label">Objetivo ejemplo</dt>
+                <dd class="sr-value">−5 kg</dd>
+              </div>
+              <div class="summary-row">
+                <dt class="sr-label">Fianza inicial</dt>
+                <dd class="sr-value">199 €</dd>
+              </div>
+              <div class="summary-row">
+                <dt class="sr-label">Devolución aprox./semana</dt>
+                <dd class="sr-value">~25 €</dd>
+              </div>
+              <div class="summary-row">
+                <dt class="sr-label">Precio del programa</dt>
+                <dd class="sr-value">50 €</dd>
+              </div>
+              <div class="summary-row sr-highlight">
+                <dt class="sr-label">Si cumples todo</dt>
+                <dd class="sr-value">Coste real: 50 €</dd>
+              </div>
+            </dl>
+            <!-- TODO: sustituye por el texto legal real sobre condiciones de devolución -->
+            <p class="summary-foot">
+              Los objetivos, importes y condiciones pueden variar según cada
+              persona. Todo se define de forma individual antes de empezar.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         QUÉ INCLUYE
+    ════════════════════════════ -->
+    <section id="includes" aria-labelledby="includes-heading">
+      <div class="container">
+        <span class="label label-line reveal">Qué incluye</span>
+        <h2 id="includes-heading" class="reveal">Todo lo que necesitas para cumplir.</h2>
+
+        <ul class="includes-grid" style="list-style:none">
+          <li class="include-card reveal">
+            <div class="include-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <h4>Plan de alimentación personalizado</h4>
+            <p>Diseñado según tus objetivos, hábitos y estilo de vida.</p>
+          </li>
+          <li class="include-card reveal reveal-delay-1">
+            <div class="include-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h4>Plan de entrenamiento adaptado</h4>
+            <p>Para gimnasio o en casa, según tus posibilidades y nivel.</p>
+          </li>
+          <li class="include-card reveal reveal-delay-2">
+            <div class="include-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h4>Seguimiento semanal</h4>
+            <p>Revisamos tu progreso cada semana para ajustar el plan.</p>
+          </li>
+          <li class="include-card reveal">
+            <div class="include-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h4>Control de peso y medidas</h4>
+            <p>Datos objetivos que reflejan tu avance real.</p>
+          </li>
+          <li class="include-card reveal reveal-delay-1">
+            <div class="include-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            </div>
+            <h4>Ajustes según evolución</h4>
+            <p>El plan se adapta a tu progreso real.</p>
+          </li>
+          <li class="include-card reveal reveal-delay-2">
+            <div class="include-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h4>Sistema de fianza reembolsable</h4>
+            <p>La herramienta de compromiso que convierte intención en acción.</p>
+          </li>
+          <li class="include-card reveal">
+            <div class="include-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h4>Acompañamiento completo</h4>
+            <p>Estás acompañado durante todo el proceso, no solo al inicio.</p>
+          </li>
+          <li class="include-card reveal reveal-delay-1">
+            <div class="include-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h4>Motivación y responsabilidad</h4>
+            <p>Un sistema que te mantiene firme más allá de la motivación inicial.</p>
+          </li>
+          <li class="include-card reveal reveal-delay-2">
+            <div class="include-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h4>Revisión de hábitos</h4>
+            <p>Trabajamos sobre la causa real del problema, no solo los síntomas.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         SECCIÓN EMOCIONAL
+    ════════════════════════════ -->
+    <section id="emotional" aria-labelledby="emotional-heading">
+      <div class="container">
+        <div class="emotional-content">
+          <span class="label label-line reveal" style="display:inline-flex;justify-content:center">El sistema</span>
+          <h2 id="emotional-heading" class="reveal">
+            Esta vez no estás pagando<br>por intentarlo.<br>
+            Estás invirtiendo en cumplirlo.
+          </h2>
+          <p class="reveal reveal-delay-1">
+            La mayoría de las personas no falla porque no quiera cambiar.
+            Falla porque empieza sin estructura, sin seguimiento y sin una
+            consecuencia real cuando abandona. Este programa cambia las
+            reglas: tienes un plan, tienes una meta y tienes un motivo extra
+            para mantenerte firme.
+          </p>
+          <div class="quote-block reveal reveal-delay-2">
+            <blockquote>Tu compromiso ahora tiene valor.</blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         ELIGE TU DIFÍCIL
+    ════════════════════════════ -->
+    <section id="elige" aria-labelledby="elige-heading">
+      <div class="elige-inner">
+        <img
+          src="assets/antes-despues.png"
+          alt="Antes y después: dos versiones del mismo hombre, una con sobrepeso y otra atlética"
+          class="elige-img"
+          loading="lazy"
+          decoding="async">
+        <div class="elige-overlay">
+          <div class="elige-text">
+            <p class="elige-sub">Estar en forma es difícil.<br>Tener sobrepeso también.</p>
+            <p class="elige-headline">Elige tu difícil.</p>
+            <a href="#pricing" class="btn-primary">Quiero empezar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         BENEFICIOS
+    ════════════════════════════ -->
+    <section id="benefits" aria-labelledby="benefits-heading">
+      <div class="container">
+        <span class="label label-line reveal">Beneficios</span>
+        <h2 id="benefits-heading" class="reveal">Lo que consigues con el sistema.</h2>
+
+        <ul class="benefits-grid" style="list-style:none">
+          <li class="benefit-item reveal">
+            <div class="benefit-check" aria-hidden="true">↗</div>
+            <h4>Más compromiso</h4>
+            <p>Tu dinero en juego cambia el nivel de implicación.</p>
+          </li>
+          <li class="benefit-item reveal reveal-delay-1">
+            <div class="benefit-check" aria-hidden="true">↗</div>
+            <h4>Más disciplina</h4>
+            <p>Un sistema claro genera hábitos duraderos.</p>
+          </li>
+          <li class="benefit-item reveal reveal-delay-2">
+            <div class="benefit-check" aria-hidden="true">↗</div>
+            <h4>Menos excusas</h4>
+            <p>La estructura elimina la ambigüedad y las justificaciones.</p>
+          </li>
+          <li class="benefit-item reveal reveal-delay-3">
+            <div class="benefit-check" aria-hidden="true">↗</div>
+            <h4>Objetivos medibles</h4>
+            <p>Sabes exactamente qué necesitas lograr cada semana.</p>
+          </li>
+          <li class="benefit-item reveal">
+            <div class="benefit-check" aria-hidden="true">↗</div>
+            <h4>Recompensa económica</h4>
+            <p>El cumplimiento tiene un retorno tangible y concreto.</p>
+          </li>
+          <li class="benefit-item reveal reveal-delay-1">
+            <div class="benefit-check" aria-hidden="true">↗</div>
+            <h4>Plan adaptado a tu vida</h4>
+            <p>No seguimos plantillas genéricas. Todo es para ti.</p>
+          </li>
+          <li class="benefit-item reveal reveal-delay-2">
+            <div class="benefit-check" aria-hidden="true">↗</div>
+            <h4>Transformación real</h4>
+            <p>Física, mental y de hábitos. Un cambio que se mantiene.</p>
+          </li>
+          <li class="benefit-item reveal reveal-delay-3">
+            <div class="benefit-check" aria-hidden="true">↗</div>
+            <h4>Seguimiento continuo</h4>
+            <p>No desaparecemos tras entregarte el plan.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         COMPARATIVA
+    ════════════════════════════ -->
+    <section id="comparison" aria-labelledby="comparison-heading">
+      <div class="container">
+        <span class="label label-line reveal">Comparativa</span>
+        <h2 id="comparison-heading" class="reveal">La diferencia está en el sistema.</h2>
+
+        <div class="comparison-grid">
+          <div class="comparison-col col-them reveal">
+            <div class="comparison-header">Dieta tradicional</div>
+            <ul class="comparison-items" style="list-style:none">
+              <li class="comparison-item">
+                <div class="ci-icon" aria-hidden="true">✕</div>
+                <p>Empiezas motivado, pero sin estructura real</p>
+              </li>
+              <li class="comparison-item">
+                <div class="ci-icon" aria-hidden="true">✕</div>
+                <p>No tienes seguimiento semanal ni rendición de cuentas</p>
+              </li>
+              <li class="comparison-item">
+                <div class="ci-icon" aria-hidden="true">✕</div>
+                <p>Abandonas cuando aparecen las excusas</p>
+              </li>
+              <li class="comparison-item">
+                <div class="ci-icon" aria-hidden="true">✕</div>
+                <p>Nadie mide tu progreso de forma objetiva</p>
+              </li>
+              <li class="comparison-item">
+                <div class="ci-icon" aria-hidden="true">✕</div>
+                <p>Pierdes tu dinero aunque no cumplas</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="comparison-col col-ours reveal reveal-delay-2">
+            <div class="comparison-header">Nuestro sistema</div>
+            <ul class="comparison-items" style="list-style:none">
+              <li class="comparison-item">
+                <div class="ci-icon" aria-hidden="true">✓</div>
+                <p>Tienes un objetivo claro y realista desde el primer día</p>
+              </li>
+              <li class="comparison-item">
+                <div class="ci-icon" aria-hidden="true">✓</div>
+                <p>Seguimiento semanal que mide tu progreso real</p>
+              </li>
+              <li class="comparison-item">
+                <div class="ci-icon" aria-hidden="true">✓</div>
+                <p>Una fianza que te mantiene comprometido más allá de la motivación</p>
+              </li>
+              <li class="comparison-item">
+                <div class="ci-icon" aria-hidden="true">✓</div>
+                <p>Cada semana cuenta. Cada avance tiene recompensa</p>
+              </li>
+              <li class="comparison-item">
+                <div class="ci-icon" aria-hidden="true">✓</div>
+                <p>Si cumples, recuperas tu dinero. El sistema trabaja a tu favor</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         AVISO DE SALUD / LEGAL
+    ════════════════════════════ -->
+    <section id="disclaimer" aria-labelledby="disclaimer-heading">
+      <div class="container">
+        <div class="disclaimer-box reveal">
+          <h3 id="disclaimer-heading">Información importante</h3>
+          <!-- TODO: revisa y adapta este aviso legal con tu asesor jurídico -->
+          <p>
+            Este programa está diseñado para personas adultas sanas que desean
+            perder peso de forma progresiva y controlada. No sustituye en
+            ningún caso el asesoramiento médico ni el tratamiento de ninguna
+            enfermedad o condición de salud.
+          </p>
+          <p>
+            Si tienes problemas de salud, lesiones, embarazo, trastornos
+            alimentarios, medicación activa o cualquier otra condición médica
+            relevante, consulta antes con un profesional de la salud antes de
+            iniciar el programa.
+          </p>
+          <!-- TODO: añade aquí las condiciones legales específicas del depósito/fianza
+               (plazos de devolución, criterios de evaluación semanal, etc.) -->
+          <p>
+            No prometemos resultados milagrosos ni resultados garantizados para
+            todo el mundo. Trabajamos con objetivos realistas, definidos de
+            forma individual, y con seguimiento y compromiso por parte del
+            participante. Los resultados dependen del cumplimiento y de las
+            circunstancias personales de cada persona.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         FAQ
+    ════════════════════════════ -->
+    <section id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <span class="label label-line reveal">Preguntas frecuentes</span>
+        <h2 id="faq-heading" class="reveal">Todo lo que necesitas saber.</h2>
+
+        <div class="faq-list reveal" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false"
+                    aria-controls="faq-answer-1">
+              ¿Realmente me devuelven dinero?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" role="region">
+              <!-- TODO: ajusta el importe máximo de devolución -->
+              <div class="faq-answer-inner">
+                Sí. Si cumples los objetivos semanales acordados, recuperas la
+                parte proporcional de tu fianza correspondiente a esa semana.
+                Si completas el programa entero, puedes recuperar hasta 199 €.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false"
+                    aria-controls="faq-answer-2">
+              ¿Qué pasa si no cumplo una semana?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" role="region">
+              <div class="faq-answer-inner">
+                Esa parte de la fianza correspondiente a la semana no cumplida
+                no se devuelve. El resto del programa sigue activo y puedes
+                seguir recuperando la fianza de las semanas restantes.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false"
+                    aria-controls="faq-answer-3">
+              ¿Quién define mi objetivo?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" role="region">
+              <div class="faq-answer-inner">
+                El objetivo se define contigo, de forma conjunta y realista,
+                según tu situación de partida, tu historial, tu disponibilidad
+                y tus condiciones físicas. Nunca imponemos metas inalcanzables.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false"
+                    aria-controls="faq-answer-4">
+              ¿Tengo que ir al gimnasio?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" role="region">
+              <div class="faq-answer-inner">
+                No necesariamente. Diseñamos el plan de entrenamiento según tus
+                posibilidades. Puede ser para gimnasio o para casa, con o sin
+                material.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false"
+                    aria-controls="faq-answer-5">
+              ¿Puedo recuperar toda la fianza?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-5" role="region">
+              <!-- TODO: confirma el importe total con tu abogado/gestor -->
+              <div class="faq-answer-inner">
+                Sí. Si cumples todos los objetivos acordados durante el
+                programa, puedes recuperar hasta el total de los 199 € de
+                fianza. Tu coste real final sería únicamente el precio del
+                programa: 50 €.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false"
+                    aria-controls="faq-answer-6">
+              ¿La fianza es obligatoria?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-6" role="region">
+              <div class="faq-answer-inner">
+                Sí. La fianza es parte esencial del sistema de compromiso.
+                Sin ella, el programa no funciona como está diseñado. Es lo
+                que convierte la intención en compromiso real.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false"
+                    aria-controls="faq-answer-7">
+              ¿Qué pasa si tengo una lesión o problema médico?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-7" role="region">
+              <div class="faq-answer-inner">
+                Debes comunicarlo antes de empezar. En algunos casos será
+                necesario consultar con un médico previamente o adaptar el
+                programa. Tu salud siempre es la prioridad.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false"
+                    aria-controls="faq-answer-8">
+              ¿Cuánto dura el programa?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-8" role="region">
+              <!-- TODO: ajusta si ofreces duraciones distintas -->
+              <div class="faq-answer-inner">
+                El ejemplo principal es de 8 semanas, pero la duración puede
+                adaptarse según el objetivo de cada persona. Lo definimos
+                juntos en la evaluación inicial.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false"
+                    aria-controls="faq-answer-9">
+              ¿Qué incluye exactamente el plan?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-9" role="region">
+              <div class="faq-answer-inner">
+                Incluye plan de alimentación personalizado, plan de
+                entrenamiento adaptado, seguimiento semanal, control de
+                progreso con peso y medidas, ajustes según evolución,
+                acompañamiento continuo y el sistema de fianza reembolsable.
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /faq-list -->
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         CTA FINAL
+    ════════════════════════════ -->
+    <section id="final-cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="final-cta-inner">
+          <span class="label label-line reveal"
+                style="display:inline-flex;justify-content:center">Empieza hoy</span>
+          <h2 id="cta-heading" class="reveal">
+            ¿Quieres adelgazar con un sistema que te obliga a cumplir?
+          </h2>
+          <p class="reveal reveal-delay-1">
+            Deja de empezar dietas que abandonas a las dos semanas. Entra en
+            un programa donde tu objetivo, tu dinero y tu compromiso trabajan
+            juntos.
+          </p>
+          <div class="final-cta-buttons reveal reveal-delay-2">
+            <!-- TODO: enlaza a tu formulario de inscripción real o pasarela de pago -->
+            <a href="#" class="btn-primary" style="font-size:16px;padding:18px 44px">
+              Solicitar mi plaza
+            </a>
+            <!-- TODO: cambia el número de WhatsApp (formato internacional sin +) -->
+            <a href="https://wa.me/34000000000" class="btn-whatsapp"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Hablar por WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.106.549 4.09 1.509 5.823L.057 23.52a.75.75 0 0 0 .921.921l5.697-1.452A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.073-1.386l-.361-.214-3.742.955.972-3.741-.234-.374A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 5.477 10 10-4.477 10-10 10z"/>
+              </svg>
+              Hablar por WhatsApp
+            </a>
+          </div>
+          <p class="final-cta-sub reveal reveal-delay-3">
+            Cada semana que cumples, avanzas. Cada avance cuenta.
+            Cada objetivo cumplido te acerca a recuperar tu fianza.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════
+       FOOTER
+  ════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <!-- TODO: cambia el nombre de la marca -->
+      <a href="#" class="logo" style="font-size:12px;letter-spacing:.15em">
+        Transform<span>·</span>Lab
+      </a>
+      <!-- TODO: actualiza el año y la razón social -->
+      <p>© 2026 Transform·Lab · Programa de transformación corporal con fianza reembolsable</p>
+      <!-- TODO: enlaza a tus páginas de privacidad y aviso legal reales -->
+      <p style="font-size:11px;max-width:500px;line-height:1.6">
+        Los resultados pueden variar. El programa no sustituye asesoramiento
+        médico profesional. Consulta con tu médico antes de comenzar cualquier
+        plan de alimentación o entrenamiento.
+        <!-- TODO: añade enlace a Política de privacidad y Aviso legal -->
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
