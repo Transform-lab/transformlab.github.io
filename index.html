@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=Hanken+Grotesk:wght@300;400;500&display=swap"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=4">
 
   <!-- Estilos críticos inline: garantizan fondo y texto visibles aunque el CSS externo falle -->
   <style>
@@ -49,7 +49,7 @@
       <div class="nav-inner">
         <!-- TODO: cambia el nombre de la marca -->
         <a href="#" class="logo">Transform<span>·</span>Lab</a>
-        <a href="#pricing" class="nav-cta">Empezar ahora</a>
+        <a href="#form" class="nav-cta">Solicitar plaza</a>
       </div>
     </nav>
   </header>
@@ -89,8 +89,26 @@
             </p>
 
             <div class="hero-ctas">
-              <a href="#pricing" class="btn-primary">Quiero empezar mi cambio</a>
+              <a href="#form"    class="btn-primary">Solicitar mi plaza</a>
               <a href="#how"     class="btn-secondary">Ver cómo funciona</a>
+            </div>
+
+            <!-- Tarjetas de precio flotantes -->
+            <div class="hero-price-cards" aria-label="Resumen de precios">
+              <div class="hpc-card">
+                <div class="hpc-value">50<span>€</span></div>
+                <div class="hpc-label">Precio de lanzamiento</div>
+              </div>
+              <div class="hpc-sep" aria-hidden="true">+</div>
+              <div class="hpc-card hpc-card--fianza">
+                <div class="hpc-value">199<span>€</span></div>
+                <div class="hpc-label">Fianza reembolsable</div>
+              </div>
+              <div class="hpc-sep" aria-hidden="true">=</div>
+              <div class="hpc-card hpc-card--total">
+                <div class="hpc-value">249<span>€</span></div>
+                <div class="hpc-label">Total inicial</div>
+              </div>
             </div>
 
             <ul class="hero-trust" aria-label="Garantías del programa">
@@ -200,77 +218,6 @@
 
         </div><!-- /story-left -->
 
-        <!-- Columna derecha: avatar sticky -->
-        <div class="story-right" id="storyRight" aria-hidden="true">
-          <div class="avatar-container">
-            <div class="avatar-smoke"></div>
-
-            <div class="avatar-slot">
-              <div class="avatar-video-area" id="avatarSlot">
-
-                <!--
-                  VÍDEO 1 — cuerpo con volumen (antes)
-                  Coloca tu archivo en: assets/turntable-volumen.mp4
-                  Poster: assets/poster-volumen.jpg  (captura del primer frame)
-                  TODO: añade también la versión WebM para mejor compresión:
-                        assets/turntable-volumen.webm
-                -->
-                <video
-                  class="v-volumen"
-                  id="videoVolumen"
-                  autoplay muted loop playsinline
-                  preload="auto"
-                  poster="assets/poster-volumen.jpg">
-                  <!-- TODO: añade fuente WebM cuando dispongas de ella -->
-                  <!-- <source src="assets/turntable-volumen.webm" type="video/webm"> -->
-                  <source src="assets/turntable-volumen.mp4"  type="video/mp4">
-                </video>
-
-                <!--
-                  VÍDEO 2 — cuerpo atlético (después)
-                  Coloca tu archivo en: assets/turntable-atletico.mp4
-                  Poster: assets/poster-atletico.jpg
-                  TODO: añade también assets/turntable-atletico.webm
-                -->
-                <video
-                  class="v-atletico"
-                  id="videoAtletico"
-                  autoplay muted loop playsinline
-                  preload="auto"
-                  poster="assets/poster-atletico.jpg">
-                  <!-- TODO: añade fuente WebM cuando dispongas de ella -->
-                  <!-- <source src="assets/turntable-atletico.webm" type="video/webm"> -->
-                  <source src="assets/turntable-atletico.mp4"  type="video/mp4">
-                </video>
-
-              </div><!-- /avatar-video-area -->
-            </div><!-- /avatar-slot -->
-
-            <!-- Barra de progreso animada -->
-            <!-- TODO: ajusta peso inicial / objetivo si son distintos -->
-            <div class="avatar-progress">
-              <div class="progress-row">
-                <span>Peso inicial</span>
-                <strong id="weightDisplay">95 kg</strong>
-              </div>
-              <div class="progress-bar-track">
-                <div class="progress-bar-fill" id="weightBar"></div>
-              </div>
-              <div class="progress-row" style="margin-top:4px">
-                <span>Objetivo</span>
-                <strong>90 kg</strong>
-              </div>
-              <div class="fianza-recovered" id="fianzaDisplay">
-                <div>
-                  <div class="label-small">Fianza recuperada</div>
-                </div>
-                <div class="amount" id="fianzaAmount">0 €</div>
-              </div>
-            </div>
-
-          </div><!-- /avatar-container -->
-        </div><!-- /story-right -->
-
       </div><!-- /story-panels -->
     </section>
 
@@ -379,14 +326,70 @@
               </p>
             </div>
             <div class="pricing-cta-area">
-              <!-- TODO: enlaza el botón al formulario o pasarela de pago real -->
-              <a href="#final-cta" class="btn-primary">Quiero entrar al reto</a>
+              <a href="#form" class="btn-primary">Solicitar mi plaza</a>
               <p class="pricing-cta-note">
                 Objetivos definidos antes de empezar · Condiciones transparentes
               </p>
             </div>
           </div>
         </div><!-- /pricing-card -->
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         REGLAS DEL RETO
+    ════════════════════════════ -->
+    <section id="reglas" aria-labelledby="reglas-heading">
+      <div class="container">
+        <span class="label label-line reveal">Cómo funciona el reto</span>
+        <h2 id="reglas-heading" class="reveal">Las 8 reglas del sistema.</h2>
+        <p class="reglas-intro reveal reveal-delay-1">
+          Nada de letra pequeña. Estas son las reglas exactas del programa,
+          para que sepas exactamente a qué te comprometes desde el primer día.
+        </p>
+
+        <ol class="reglas-grid" style="list-style:none">
+          <li class="regla-card reveal">
+            <div class="regla-num" aria-hidden="true">01</div>
+            <h4>Objetivo definido antes de empezar</h4>
+            <p>Tu objetivo de peso y tiempo se pacta contigo antes de activar la fianza. Sin sorpresas ni cambios unilaterales.</p>
+          </li>
+          <li class="regla-card reveal reveal-delay-1">
+            <div class="regla-num" aria-hidden="true">02</div>
+            <h4>Check-in semanal obligatorio</h4>
+            <p>Cada semana envías foto con báscula y medidas. Si no hay check-in, la semana no se contabiliza como cumplida.</p>
+          </li>
+          <li class="regla-card reveal reveal-delay-2">
+            <div class="regla-num" aria-hidden="true">03</div>
+            <h4>La fianza se activa al inicio</h4>
+            <p>Los 199 € de fianza se depositan al empezar el programa. Son tuyo: los recuperas si cumples.</p>
+          </li>
+          <li class="regla-card reveal reveal-delay-3">
+            <div class="regla-num" aria-hidden="true">04</div>
+            <h4>Devolución proporcional por semana</h4>
+            <p>Cada semana cumplida devuelve una parte de tu fianza. No tienes que esperar al final para recuperar.</p>
+          </li>
+          <li class="regla-card reveal">
+            <div class="regla-num" aria-hidden="true">05</div>
+            <h4>El plan es tuyo desde el día 1</h4>
+            <p>Recibes tu plan de alimentación y entrenamiento personalizado al inicio del programa, no semana a semana.</p>
+          </li>
+          <li class="regla-card reveal reveal-delay-1">
+            <div class="regla-num" aria-hidden="true">06</div>
+            <h4>Sin trampa en la medición</h4>
+            <p>El progreso se evalúa por peso y medidas reales, no por sensaciones ni esfuerzo percibido. Los números no mienten.</p>
+          </li>
+          <li class="regla-card reveal reveal-delay-2">
+            <div class="regla-num" aria-hidden="true">07</div>
+            <h4>Ajustes ante imprevistos reales</h4>
+            <p>Si hay una lesión o fuerza mayor documentada, se evalúa el caso. El sistema es justo, no rígido.</p>
+          </li>
+          <li class="regla-card reveal reveal-delay-3">
+            <div class="regla-num" aria-hidden="true">08</div>
+            <h4>Si cumples todo, el reto te sale por 50 €</h4>
+            <p>Completas las 8 semanas, alcanzas tu objetivo y recuperas los 199 € íntegros. Tu coste real: el programa.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -595,20 +598,47 @@
          ELIGE TU DIFÍCIL
     ════════════════════════════ -->
     <section id="elige" aria-labelledby="elige-heading">
-      <div class="elige-inner">
-        <img
-          src="assets/antes-despues.png"
-          alt="Antes y después: dos versiones del mismo hombre, una con sobrepeso y otra atlética"
-          class="elige-img"
-          loading="lazy"
-          decoding="async">
-        <div class="elige-overlay">
-          <div class="elige-text">
-            <p class="elige-sub">Estar en forma es difícil.<br>Tener sobrepeso también.</p>
-            <p class="elige-headline">Elige tu difícil.</p>
-            <a href="#pricing" class="btn-primary">Quiero empezar</a>
+      <div class="elige-split">
+
+        <!-- Panel izquierdo: el difícil cómodo -->
+        <div class="elige-panel elige-panel--left" aria-hidden="true">
+          <div class="elige-panel-inner">
+            <div class="elige-panel-tag">El camino de siempre</div>
+            <ul class="elige-list elige-list--bad">
+              <li>Empiezas el lunes</li>
+              <li>Abandonas a las 2 semanas</li>
+              <li>Sin estructura ni seguimiento</li>
+              <li>El mismo ciclo, otra vez</li>
+              <li>Sin resultados reales</li>
+            </ul>
           </div>
+          <div class="elige-panel-glow elige-panel-glow--left" aria-hidden="true"></div>
         </div>
+
+        <!-- Centro: titular -->
+        <div class="elige-center">
+          <p class="elige-sub" id="elige-heading">
+            Los dos son difíciles.<br>Solo uno te cambia la vida.
+          </p>
+          <p class="elige-headline">Elige tu difícil.</p>
+          <a href="#form" class="btn-primary">Solicitar mi plaza</a>
+        </div>
+
+        <!-- Panel derecho: el difícil que vale -->
+        <div class="elige-panel elige-panel--right" aria-hidden="true">
+          <div class="elige-panel-inner">
+            <div class="elige-panel-tag">Con Transform·Lab</div>
+            <ul class="elige-list elige-list--good">
+              <li>Objetivo claro desde el día 1</li>
+              <li>Plan personalizado para ti</li>
+              <li>Seguimiento semanal real</li>
+              <li>Fianza que te mantiene firme</li>
+              <li>Resultados medibles</li>
+            </ul>
+          </div>
+          <div class="elige-panel-glow elige-panel-glow--right" aria-hidden="true"></div>
+        </div>
+
       </div>
     </section>
 
@@ -917,6 +947,314 @@
     </section>
 
     <!-- ════════════════════════════
+         URGENCIA / PLAZAS LIMITADAS
+    ════════════════════════════ -->
+    <section id="urgencia" aria-labelledby="urgencia-heading">
+      <div class="container">
+        <div class="urgencia-box reveal">
+          <div class="urgencia-icon" aria-hidden="true">⏳</div>
+          <div class="urgencia-content">
+            <h3 id="urgencia-heading">Plazas limitadas para el reto de lanzamiento</h3>
+            <p>
+              Esta es la primera convocatoria de Transform·Lab. Aceptamos un número
+              muy reducido de participantes para garantizar el seguimiento personalizado.
+              Una vez cubiertas las plazas, la siguiente convocatoria no tiene fecha abierta.
+            </p>
+            <ul class="urgencia-list" style="list-style:none">
+              <li><span aria-hidden="true">→</span> Precio de lanzamiento: solo disponible en esta convocatoria</li>
+              <li><span aria-hidden="true">→</span> Atención personalizada garantizada para cada participante</li>
+              <li><span aria-hidden="true">→</span> Las solicitudes se revisan y confirman por orden de llegada</li>
+            </ul>
+          </div>
+          <a href="#form" class="btn-primary urgencia-cta">Solicitar mi plaza ahora</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+         FORMULARIO DE SOLICITUD
+    ════════════════════════════ -->
+    <section id="form" aria-labelledby="form-heading">
+      <div class="container">
+        <span class="label label-line reveal">Solicitud de plaza</span>
+        <h2 id="form-heading" class="reveal">Cuéntanos un poco sobre ti.</h2>
+        <p class="form-intro reveal reveal-delay-1">
+          Rellena el formulario con la mayor honestidad posible. Usamos estos datos
+          para valorar si el programa es adecuado para ti y para preparar tu plan personalizado.
+          No te compromete a nada hasta que confirmemos tu plaza.
+        </p>
+
+        <form class="solicitud-form reveal reveal-delay-2" id="solicitudForm" onsubmit="return false;" novalidate>
+
+          <!-- BLOQUE 1: Datos básicos -->
+          <fieldset class="form-block">
+            <legend class="form-block-title">
+              <span class="form-block-num" aria-hidden="true">01</span>
+              Datos básicos
+            </legend>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="f-nombre">Nombre completo</label>
+                <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email</label>
+                <input type="email" id="f-email" name="email" placeholder="tu@email.com" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="f-edad">Edad</label>
+                <input type="number" id="f-edad" name="edad" placeholder="Ej: 32" min="18" max="70">
+              </div>
+              <div class="form-group">
+                <label for="f-sexo">Sexo</label>
+                <select id="f-sexo" name="sexo">
+                  <option value="" disabled selected>Selecciona</option>
+                  <option value="hombre">Hombre</option>
+                  <option value="mujer">Mujer</option>
+                  <option value="otro">Otro / Prefiero no decir</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- BLOQUE 2: Objetivo físico -->
+          <fieldset class="form-block">
+            <legend class="form-block-title">
+              <span class="form-block-num" aria-hidden="true">02</span>
+              Objetivo físico
+            </legend>
+            <div class="form-row form-row--3">
+              <div class="form-group">
+                <label for="f-peso-actual">Peso actual (kg)</label>
+                <input type="number" id="f-peso-actual" name="peso_actual" placeholder="Ej: 90">
+              </div>
+              <div class="form-group">
+                <label for="f-altura">Altura (cm)</label>
+                <input type="number" id="f-altura" name="altura" placeholder="Ej: 175">
+              </div>
+              <div class="form-group">
+                <label for="f-peso-objetivo">Peso objetivo (kg)</label>
+                <input type="number" id="f-peso-objetivo" name="peso_objetivo" placeholder="Ej: 82">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Objetivo principal</label>
+              <div class="radio-grid" role="radiogroup" aria-label="Objetivo principal">
+                <label class="radio-card">
+                  <input type="radio" name="objetivo" value="perder_grasa">
+                  <span class="radio-label">Perder grasa</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="objetivo" value="ganar_musculo">
+                  <span class="radio-label">Ganar músculo</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="objetivo" value="definicion">
+                  <span class="radio-label">Definición</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="objetivo" value="mejorar_habitos">
+                  <span class="radio-label">Mejorar hábitos</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- BLOQUE 3: Alimentación -->
+          <fieldset class="form-block">
+            <legend class="form-block-title">
+              <span class="form-block-num" aria-hidden="true">03</span>
+              Alimentación
+            </legend>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="f-alergias">Alergias alimentarias</label>
+                <input type="text" id="f-alergias" name="alergias" placeholder="Ej: frutos secos, marisco...">
+              </div>
+              <div class="form-group">
+                <label for="f-intolerancias">Intolerancias</label>
+                <input type="text" id="f-intolerancias" name="intolerancias" placeholder="Ej: lactosa, gluten...">
+              </div>
+            </div>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="f-dieta">Tipo de dieta especial</label>
+                <select id="f-dieta" name="dieta">
+                  <option value="" disabled selected>Selecciona</option>
+                  <option value="ninguna">Ninguna (todo)</option>
+                  <option value="vegetariana">Vegetariana</option>
+                  <option value="vegana">Vegana</option>
+                  <option value="halal">Halal</option>
+                  <option value="kosher">Kosher</option>
+                  <option value="otra">Otra</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="f-no-come">Alimentos que no comes</label>
+                <input type="text" id="f-no-come" name="no_come" placeholder="Ej: hígado, cebolla...">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- BLOQUE 4: Entrenamiento -->
+          <fieldset class="form-block">
+            <legend class="form-block-title">
+              <span class="form-block-num" aria-hidden="true">04</span>
+              Entrenamiento actual
+            </legend>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="f-entrena">¿Entrenas actualmente?</label>
+                <select id="f-entrena" name="entrena_ahora">
+                  <option value="" disabled selected>Selecciona</option>
+                  <option value="si_habitual">Sí, de forma habitual</option>
+                  <option value="si_esporadico">Sí, pero de forma esporádica</option>
+                  <option value="no">No entreno ahora mismo</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Dónde entrenas</label>
+                <div class="radio-grid radio-grid--inline" role="radiogroup" aria-label="Lugar de entrenamiento">
+                  <label class="radio-card">
+                    <input type="radio" name="lugar" value="gimnasio">
+                    <span class="radio-label">Gimnasio</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="lugar" value="casa">
+                    <span class="radio-label">Casa</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="lugar" value="exterior">
+                    <span class="radio-label">Exterior</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="lugar" value="mixto">
+                    <span class="radio-label">Mixto</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-row form-row--3">
+              <div class="form-group">
+                <label for="f-nivel">Nivel</label>
+                <select id="f-nivel" name="nivel">
+                  <option value="" disabled selected>Selecciona</option>
+                  <option value="principiante">Principiante</option>
+                  <option value="intermedio">Intermedio</option>
+                  <option value="avanzado">Avanzado</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="f-dias">Días/semana disponibles</label>
+                <select id="f-dias" name="dias_semana">
+                  <option value="" disabled selected>Selecciona</option>
+                  <option value="2">2 días</option>
+                  <option value="3">3 días</option>
+                  <option value="4">4 días</option>
+                  <option value="5">5 días</option>
+                  <option value="6+">6 o más</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="f-tiempo">Tiempo por sesión</label>
+                <select id="f-tiempo" name="tiempo_sesion">
+                  <option value="" disabled selected>Selecciona</option>
+                  <option value="30">~30 min</option>
+                  <option value="45">~45 min</option>
+                  <option value="60">~60 min</option>
+                  <option value="90">~90 min</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- BLOQUE 5: Salud -->
+          <fieldset class="form-block">
+            <legend class="form-block-title">
+              <span class="form-block-num" aria-hidden="true">05</span>
+              Salud
+            </legend>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="f-lesiones">Lesiones actuales o pasadas</label>
+                <textarea id="f-lesiones" name="lesiones" rows="2" placeholder="Ej: rotura de menisco, tendinitis..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="f-dolor">Zonas de dolor o molestia</label>
+                <textarea id="f-dolor" name="dolor" rows="2" placeholder="Ej: rodilla derecha, zona lumbar..."></textarea>
+              </div>
+            </div>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="f-enfermedades">Enfermedades diagnosticadas</label>
+                <input type="text" id="f-enfermedades" name="enfermedades" placeholder="Ej: hipotiroidismo, diabetes...">
+              </div>
+              <div class="form-group">
+                <label for="f-medicacion">Medicación actual</label>
+                <input type="text" id="f-medicacion" name="medicacion" placeholder="Ej: Eutirox, metformina...">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-salud-extra">Otra información relevante sobre tu salud</label>
+              <textarea id="f-salud-extra" name="salud_extra" rows="2" placeholder="Cualquier cosa que creas importante que sepamos..."></textarea>
+            </div>
+          </fieldset>
+
+          <!-- BLOQUE 6: Motivación -->
+          <fieldset class="form-block">
+            <legend class="form-block-title">
+              <span class="form-block-num" aria-hidden="true">06</span>
+              Motivación
+            </legend>
+            <div class="form-group">
+              <label for="f-por-que">¿Por qué quieres entrar en este reto?</label>
+              <textarea id="f-por-que" name="por_que" rows="3" placeholder="Cuéntanos qué te ha traído hasta aquí..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="f-freno">¿Qué te ha frenado antes?</label>
+              <textarea id="f-freno" name="freno" rows="3" placeholder="¿Falta de tiempo, constancia, información...?"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="f-compromiso">¿Cuánto te comprometes del 1 al 10?</label>
+              <div class="compromiso-slider">
+                <input type="range" id="f-compromiso" name="compromiso" min="1" max="10" value="8"
+                       oninput="document.getElementById('compromisoVal').textContent=this.value">
+                <div class="compromiso-display">
+                  <span id="compromisoVal">8</span>
+                  <span style="font-size:13px;color:var(--text-muted)">/10</span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- AVISO LEGAL + BOTÓN -->
+          <div class="form-footer">
+            <label class="form-checkbox">
+              <input type="checkbox" name="aviso_medico" id="f-aviso">
+              <span class="checkbox-custom" aria-hidden="true"></span>
+              <span class="checkbox-label">
+                He leído y entiendo que Transform·Lab no sustituye asesoramiento médico profesional.
+                Si tengo alguna condición de salud, consultaré con mi médico antes de comenzar.
+              </span>
+            </label>
+
+            <button type="button" class="btn-primary btn-form-submit" onclick="alert('Formulario todavía no activo.\n\nProximamente podrás enviar tu solicitud directamente desde aquí.')">
+              Solicitud próximamente activa
+            </button>
+
+            <p class="form-disclaimer">
+              Tus datos se usarán únicamente para preparar tu plan y valorar tu solicitud.
+              No los compartiremos con terceros.
+            </p>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
          CTA FINAL
     ════════════════════════════ -->
     <section id="final-cta" aria-labelledby="cta-heading">
@@ -925,32 +1263,24 @@
           <span class="label label-line reveal"
                 style="display:inline-flex;justify-content:center">Empieza hoy</span>
           <h2 id="cta-heading" class="reveal">
-            ¿Quieres adelgazar con un sistema que te obliga a cumplir?
+            El momento de decidir es ahora.
           </h2>
           <p class="reveal reveal-delay-1">
-            Deja de empezar dietas que abandonas a las dos semanas. Entra en
-            un programa donde tu objetivo, tu dinero y tu compromiso trabajan
-            juntos.
+            Cada semana que pasa sin estructura es una semana más repitiendo
+            el mismo ciclo. Entra en el reto, cumple tus objetivos y
+            recupera tu inversión. Sin excusas. Con resultados.
           </p>
           <div class="final-cta-buttons reveal reveal-delay-2">
-            <!-- TODO: enlaza a tu formulario de inscripción real o pasarela de pago -->
-            <a href="#" class="btn-primary" style="font-size:16px;padding:18px 44px">
+            <a href="#form" class="btn-primary" style="font-size:16px;padding:18px 44px">
               Solicitar mi plaza
             </a>
-            <!-- TODO: cambia el número de WhatsApp (formato internacional sin +) -->
-            <a href="https://wa.me/34000000000" class="btn-whatsapp"
-               target="_blank" rel="noopener noreferrer"
-               aria-label="Hablar por WhatsApp">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.106.549 4.09 1.509 5.823L.057 23.52a.75.75 0 0 0 .921.921l5.697-1.452A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.944 9.944 0 0 1-5.073-1.386l-.361-.214-3.742.955.972-3.741-.234-.374A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 5.477 10 10-4.477 10-10 10z"/>
-              </svg>
-              Hablar por WhatsApp
+            <a href="#how" class="btn-secondary" style="font-size:15px;padding:16px 32px">
+              Ver cómo funciona
             </a>
           </div>
           <p class="final-cta-sub reveal reveal-delay-3">
-            Cada semana que cumples, avanzas. Cada avance cuenta.
-            Cada objetivo cumplido te acerca a recuperar tu fianza.
+            Plazas limitadas para esta convocatoria de lanzamiento.
+            Las solicitudes se confirman por orden de llegada.
           </p>
         </div>
       </div>
@@ -979,6 +1309,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>
