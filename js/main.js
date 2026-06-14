@@ -25,6 +25,39 @@
     document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; visible = false; });
   }
 
+  /* ─── FORMULARIO → FORMSPREE → STRIPE ─── */
+  const form = document.getElementById('solicitudForm');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const stripeUrl = form.querySelector('input[name="_next"]').value;
+
+      btn.disabled = true;
+      btn.textContent = 'Wird gesendet…';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          window.location.href = stripeUrl;
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Weiter zur Zahlung — 259 €';
+          alert('Fehler beim Senden. Bitte versuche es erneut.');
+        }
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Weiter zur Zahlung — 259 €';
+        alert('Verbindungsfehler. Bitte versuche es erneut.');
+      }
+    });
+  }
+
   /* ─── FAQ ACORDEÓN ─── */
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
