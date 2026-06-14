@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- TODO: cambia el title y description por los de tu marca real -->
-  <title>Transform·Lab — Te pagamos por adelgazar</title>
+  <title>Transform·Lab — Wir bezahlen dich fürs Abnehmen</title>
   <meta name="description"
-        content="Programa de transformación corporal con fianza reembolsable. Cumple tus objetivos semanales y recupera hasta 199 € mientras transformas tu cuerpo.">
+        content="Körpertransformationsprogramm mit rückerstattbarer Kaution. Erreiche deine wöchentlichen Ziele und bekomme bis zu 199 € zurück, während du deinen Körper transformierst.">
 
-  <!-- Open Graph (compartir en redes) -->
-  <!-- TODO: sustituye og:url, og:image y og:site_name por los de tu dominio real -->
   <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://tusitio.com/">
-  <meta property="og:title"       content="Transform·Lab — Te pagamos por adelgazar">
-  <meta property="og:description" content="Cumple tus objetivos semanales y recupera hasta 199 € de fianza. Plan de alimentación + entrenamiento personalizado.">
-  <meta property="og:image"       content="https://tusitio.com/assets/og-image.jpg">
+  <meta property="og:url"         content="https://transform-lab.github.io/">
+  <meta property="og:title"       content="Transform·Lab — Wir bezahlen dich fürs Abnehmen">
+  <meta property="og:description" content="Erreiche deine Ziele und bekomme bis zu 199 € Kaution zurück. Persönlicher Ernährungs- und Trainingsplan inklusive.">
+  <meta property="og:image"       content="https://transform-lab.github.io/assets/og-image.jpg">
   <meta name="twitter:card"       content="summary_large_image">
 
-  <!-- Favicon -->
-  <!-- TODO: añade tu favicon real en /assets/favicon.ico -->
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
-  <!-- Tipografías: Bricolage Grotesque (títulos) · Hanken Grotesk (cuerpo) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=Hanken+Grotesk:wght@300;400;500&display=swap"
@@ -30,7 +24,6 @@
 
   <link rel="stylesheet" href="css/styles.css?v=4">
 
-  <!-- Estilos críticos inline: garantizan fondo y texto visibles aunque el CSS externo falle -->
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: #080808; color: #f0ede8; font-family: system-ui, sans-serif; }
@@ -38,27 +31,20 @@
 </head>
 <body>
 
-  <!-- Efecto de luz que sigue el cursor (solo desktop) -->
   <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-  <!-- ════════════════════════════
-       NAVEGACIÓN FIJA
-  ════════════════════════════ -->
   <header>
-    <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+    <nav class="site-nav" id="siteNav" aria-label="Hauptnavigation">
       <div class="nav-inner">
-        <!-- TODO: cambia el nombre de la marca -->
         <a href="#" class="logo">Transform<span>·</span>Lab</a>
-        <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="nav-cta">Solicitar plaza</a>
+        <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="nav-cta">Platz sichern</a>
       </div>
     </nav>
   </header>
 
   <main>
 
-    <!-- ════════════════════════════
-         HERO
-    ════════════════════════════ -->
+    <!-- HERO -->
     <section id="hero" aria-labelledby="hero-heading">
       <div class="hero-bg"   aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
@@ -66,68 +52,64 @@
       <div class="container hero-content">
         <div class="hero-inner">
 
-          <!-- Columna izquierda: texto -->
           <div class="hero-text-col">
-            <!-- TODO: ajusta el badge si cambias el estado de lanzamiento -->
-            <div class="hero-badge" aria-label="Estado de oferta">
+            <div class="hero-badge" aria-label="Angebotsstatus">
               <span class="hero-badge-dot" aria-hidden="true"></span>
-              Oferta de lanzamiento disponible
+              Einführungsangebot verfügbar
             </div>
 
             <h1 id="hero-heading" class="hero-title">
-              Te pagamos<br>por adelgazar.
+              Wir bezahlen dich<br>fürs Abnehmen.
             </h1>
 
             <p class="hero-sub">
-              Entra en nuestro programa de alimentación y entrenamiento, cumple
-              tus objetivos semanales y recupera tu fianza mientras transformas
-              tu cuerpo.
+              Tritt unserem Ernährungs- und Trainingsprogramm bei, erreiche
+              deine wöchentlichen Ziele und bekomme deine Kaution zurück,
+              während du deinen Körper transformierst.
             </p>
             <p class="hero-meta">
-              No se trata de motivación pasajera. Se trata de un sistema diseñado
-              para que cumplas.
+              Es geht nicht um kurzfristige Motivation. Es geht um ein System,
+              das dich zum Erfolg zwingt.
             </p>
 
             <div class="hero-ctas">
-              <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener"    class="btn-primary">Solicitar mi plaza</a>
-              <a href="#how"     class="btn-secondary">Ver cómo funciona</a>
+              <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="btn-primary">Meinen Platz sichern</a>
+              <a href="#how" class="btn-secondary">So funktioniert es</a>
             </div>
 
-            <!-- Tarjetas de precio flotantes -->
-            <div class="hero-price-cards" aria-label="Resumen de precios">
+            <div class="hero-price-cards" aria-label="Preisübersicht">
               <div class="hpc-card">
                 <div class="hpc-value">50<span>€</span></div>
-                <div class="hpc-label">Precio de lanzamiento</div>
+                <div class="hpc-label">Einführungspreis</div>
               </div>
               <div class="hpc-sep" aria-hidden="true">+</div>
               <div class="hpc-card hpc-card--fianza">
                 <div class="hpc-value">199<span>€</span></div>
-                <div class="hpc-label">Fianza reembolsable</div>
+                <div class="hpc-label">Rückerstattbare Kaution</div>
               </div>
               <div class="hpc-sep" aria-hidden="true">=</div>
               <div class="hpc-card hpc-card--total">
                 <div class="hpc-value">249<span>€</span></div>
-                <div class="hpc-label">Total inicial</div>
+                <div class="hpc-label">Gesamtbetrag</div>
               </div>
             </div>
 
-            <ul class="hero-trust" aria-label="Garantías del programa">
+            <ul class="hero-trust" aria-label="Programmgarantien">
               <li>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Objetivos realistas
+                Realistische Ziele
               </li>
               <li>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Seguimiento semanal
+                Wöchentliches Tracking
               </li>
               <li>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Fianza reembolsable según cumplimiento
+                Kaution je nach Zielerreichung rückerstattbar
               </li>
             </ul>
           </div>
 
-          <!-- Columna derecha: escultura (solo desktop) -->
           <div class="hero-image-col" aria-hidden="true">
             <img
               src="assets/escultura-transformacion.png"
@@ -141,139 +123,129 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         NÚMEROS CLAVE
-    ════════════════════════════ -->
-    <!-- TODO: actualiza estas cifras si cambias el precio o la duración del reto -->
-    <div class="numbers-strip" aria-label="Datos clave del programa">
+    <!-- ZAHLEN -->
+    <div class="numbers-strip" aria-label="Programmdaten">
       <div class="container">
         <ul class="numbers-grid" style="list-style:none">
           <li class="number-item reveal">
             <div class="num">50<span>€</span></div>
-            <div class="desc">Precio de lanzamiento</div>
+            <div class="desc">Einführungspreis</div>
           </li>
           <li class="number-item reveal reveal-delay-1">
             <div class="num">199<span>€</span></div>
-            <div class="desc">Fianza recuperable</div>
+            <div class="desc">Rückerstattbare Kaution</div>
           </li>
           <li class="number-item reveal reveal-delay-2">
             <div class="num">8</div>
-            <div class="desc">Semanas de reto</div>
+            <div class="desc">Wochen Challenge</div>
           </li>
           <li class="number-item reveal reveal-delay-3">
             <div class="num">100<span>%</span></div>
-            <div class="desc">Recuperable si cumples</div>
+            <div class="desc">Rückerstattbar bei Zielerreichung</div>
           </li>
         </ul>
       </div>
     </div>
 
-    <!-- ════════════════════════════
-         SCROLL STORY + AVATAR TURNTABLE
-    ════════════════════════════ -->
+    <!-- STORY -->
     <section id="story" aria-labelledby="story-heading">
       <div class="story-intro container reveal">
-        <span class="label label-line">Tu transformación</span>
+        <span class="label label-line">Deine Transformation</span>
         <h2 id="story-heading">
-          Adelgazar ya no depende solo de motivación.<br>
-          Depende de un sistema.
+          Abnehmen hängt nicht nur von Motivation ab.<br>
+          Es hängt von einem System ab.
         </h2>
-        <p>Cuatro fases. Un objetivo claro. Una fianza que te mantiene
-           comprometido en cada paso.</p>
+        <p>Vier Phasen. Ein klares Ziel. Eine Kaution, die dich
+           bei jedem Schritt motiviert.</p>
       </div>
 
       <div class="story-panels" id="storyPanels">
-
-        <!-- Columna izquierda: fases de texto -->
         <div class="story-left" id="storyLeft">
 
-          <div class="story-phase active" data-phase="0" data-phase-label="Hoy">
-            <div class="phase-number" aria-hidden="true">Fase 01</div>
-            <h3>Hoy</h3>
-            <p>Empiezas con ganas de cambiar, pero necesitas algo más que
-               motivación. Necesitas estructura, seguimiento y un motivo real
-               para no abandonar.</p>
+          <div class="story-phase active" data-phase="0" data-phase-label="Heute">
+            <div class="phase-number" aria-hidden="true">Phase 01</div>
+            <h3>Heute</h3>
+            <p>Du willst etwas verändern, aber du brauchst mehr als
+               Motivation. Du brauchst Struktur, Begleitung und einen
+               echten Grund, nicht aufzugeben.</p>
           </div>
 
-          <div class="story-phase" data-phase="1" data-phase-label="Semana 1–2">
-            <div class="phase-number" aria-hidden="true">Fase 02</div>
-            <h3>Semana 1–2</h3>
-            <p>Definimos tu objetivo. Recibes tu plan de alimentación y
-               entrenamiento personalizado. Activas tu compromiso con la fianza.</p>
+          <div class="story-phase" data-phase="1" data-phase-label="Woche 1–2">
+            <div class="phase-number" aria-hidden="true">Phase 02</div>
+            <h3>Woche 1–2</h3>
+            <p>Wir definieren dein Ziel. Du erhältst deinen persönlichen
+               Ernährungs- und Trainingsplan. Du aktivierst dein Engagement
+               mit der Kaution.</p>
           </div>
 
-          <div class="story-phase" data-phase="2" data-phase-label="Semana 3–5">
-            <div class="phase-number" aria-hidden="true">Fase 03</div>
-            <h3>Semana 3–5</h3>
-            <p>Cada semana cuenta. Si cumples tu objetivo semanal, recuperas
-               una parte de tu fianza. El sistema trabaja a tu favor.</p>
+          <div class="story-phase" data-phase="2" data-phase-label="Woche 3–5">
+            <div class="phase-number" aria-hidden="true">Phase 03</div>
+            <h3>Woche 3–5</h3>
+            <p>Jede Woche zählt. Wenn du dein Wochenziel erreichst,
+               bekommst du einen Teil deiner Kaution zurück.
+               Das System arbeitet für dich.</p>
           </div>
 
-          <div class="story-phase" data-phase="3" data-phase-label="Tu transformación">
-            <div class="phase-number" aria-hidden="true">Fase 04</div>
-            <h3>Tu transformación</h3>
-            <p>Cumples tu objetivo, recuperas tu fianza y construyes una nueva
-               versión de ti. Sin promesas vacías. Con resultados medibles.</p>
+          <div class="story-phase" data-phase="3" data-phase-label="Deine Transformation">
+            <div class="phase-number" aria-hidden="true">Phase 04</div>
+            <h3>Deine Transformation</h3>
+            <p>Du erreichst dein Ziel, bekommst deine Kaution zurück
+               und baust eine neue Version von dir auf. Keine leeren
+               Versprechen. Messbare Ergebnisse.</p>
           </div>
 
-        </div><!-- /story-left -->
-
-      </div><!-- /story-panels -->
+        </div>
+      </div>
     </section>
 
-    <!-- ════════════════════════════
-         CÓMO FUNCIONA
-    ════════════════════════════ -->
+    <!-- SO FUNKTIONIERT ES -->
     <section id="how" aria-labelledby="how-heading">
       <div class="container">
-        <span class="label label-line reveal">Cómo funciona</span>
-        <h2 id="how-heading" class="reveal">Un sistema en cuatro pasos.</h2>
+        <span class="label label-line reveal">So funktioniert es</span>
+        <h2 id="how-heading" class="reveal">Ein System in vier Schritten.</h2>
 
         <ol class="steps" style="list-style:none">
           <li class="step reveal">
             <div class="step-num" aria-hidden="true">01</div>
-            <h3>Definimos tu objetivo</h3>
-            <p>Analizamos tu situación inicial y marcamos una meta realista
-               según tu peso, hábitos, tiempo disponible y nivel físico.</p>
+            <h3>Wir definieren dein Ziel</h3>
+            <p>Wir analysieren deine Ausgangssituation und setzen ein
+               realistisches Ziel basierend auf deinem Gewicht, deinen
+               Gewohnheiten, verfügbarer Zeit und körperlichem Level.</p>
           </li>
           <li class="step reveal reveal-delay-1">
             <div class="step-num" aria-hidden="true">02</div>
-            <h3>Recibes tu plan personalizado</h3>
-            <p>Te entregamos un plan de alimentación y entrenamiento adaptado
-               a ti, con seguimiento semanal incluido.</p>
+            <h3>Du erhältst deinen persönlichen Plan</h3>
+            <p>Wir liefern dir einen auf dich zugeschnittenen Ernährungs-
+               und Trainingsplan mit wöchentlichem Tracking inklusive.</p>
           </li>
           <li class="step reveal reveal-delay-2">
             <div class="step-num" aria-hidden="true">03</div>
-            <h3>Dejas una fianza de compromiso</h3>
-            <!-- TODO: actualiza el importe de la fianza si cambia -->
-            <p>La fianza no es un castigo. Es una herramienta para ayudarte
-               a mantenerte firme cuando la motivación baja.</p>
+            <h3>Du hinterlegst eine Commitment-Kaution</h3>
+            <p>Die Kaution ist keine Strafe. Sie ist ein Werkzeug, das
+               dir hilft, standhaft zu bleiben, wenn die Motivation sinkt.</p>
           </li>
           <li class="step reveal reveal-delay-3">
             <div class="step-num" aria-hidden="true">04</div>
-            <h3>Cumples y recuperas</h3>
-            <p>Cada semana que alcanzas el objetivo acordado, recuperas una
-               parte proporcional de tu fianza. Así de claro.</p>
+            <h3>Du erreichst dein Ziel und bekommst zurück</h3>
+            <p>Jede Woche, in der du dein vereinbartes Ziel erreichst,
+               bekommst du einen proportionalen Teil deiner Kaution zurück.
+               So einfach ist das.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         PRECIO / OFERTA
-    ════════════════════════════ -->
+    <!-- PREIS -->
     <section id="pricing" aria-labelledby="pricing-heading">
       <div class="container">
         <div class="pricing-header reveal">
-          <!-- TODO: retira o actualiza este badge cuando termine el lanzamiento -->
-          <div class="launch-badge">Oferta de lanzamiento</div>
-          <!-- TODO: actualiza los precios -->
+          <div class="launch-badge">Einführungsangebot</div>
           <h2 id="pricing-heading">
-            Empieza por 50 €.<br>Recupera hasta 199 € si cumples.
+            Starte ab 50 €.<br>Bekomme bis zu 199 € zurück, wenn du es schaffst.
           </h2>
           <p style="margin-top:16px; max-width:500px; margin-left:auto; margin-right:auto;">
-            La fianza no es un pago perdido. Es tu compromiso convertido
-            en acción.
+            Die Kaution ist keine verlorene Zahlung. Es ist dein Engagement,
+            das in Aktion umgewandelt wird.
           </p>
         </div>
 
@@ -281,35 +253,33 @@
           <div class="pricing-top">
             <div class="pricing-title-area">
               <div>
-                <h3>Programa completo de transformación</h3>
+                <h3>Komplettes Transformationsprogramm</h3>
                 <p style="font-size:13px; margin-top:6px;">
-                  Plan de alimentación + plan de entrenamiento + sistema de fianza
+                  Ernährungsplan + Trainingsplan + Kautionssystem
                 </p>
               </div>
               <div class="price-display">
-                <!-- TODO: actualiza valor real y precio de lanzamiento -->
-                <div class="price-was">Valor real 139 €</div>
+                <div class="price-was">Realwert 139 €</div>
                 <div class="price-now"><sup>€</sup>50</div>
-                <div class="price-note">precio de lanzamiento</div>
+                <div class="price-note">Einführungspreis</div>
               </div>
             </div>
 
-            <!-- TODO: ajusta cada línea de precio si cambian los importes -->
             <dl class="line-items">
               <div class="line-item">
-                <dt class="li-name">Plan de alimentación personalizado</dt>
+                <dt class="li-name">Persönlicher Ernährungsplan</dt>
                 <dd class="li-price">36 €</dd>
               </div>
               <div class="line-item">
-                <dt class="li-name">Plan de entrenamiento adaptado</dt>
+                <dt class="li-name">Angepasster Trainingsplan</dt>
                 <dd class="li-price">14 €</dd>
               </div>
               <div class="line-item li-fianza">
-                <dt class="li-name">Fianza de compromiso reembolsable</dt>
+                <dt class="li-name">Rückerstattbare Commitment-Kaution</dt>
                 <dd class="li-price">199 €</dd>
               </div>
               <div class="line-item li-total">
-                <dt class="li-name">Total inicial</dt>
+                <dt class="li-name">Gesamtbetrag</dt>
                 <dd class="li-price">249 €</dd>
               </div>
             </dl>
@@ -319,91 +289,84 @@
             <div class="recovery-callout">
               <div class="recovery-icon" aria-hidden="true">↩</div>
               <p>
-                <!-- TODO: actualiza los importes de recuperación -->
-                <strong>Puedes recuperar hasta 199 €.</strong> Si cumples
-                todos los objetivos, tu coste final real es solo 50 €.
-                Cada semana que cumples, recuperas parte de tu fianza.
+                <strong>Du kannst bis zu 199 € zurückbekommen.</strong> Wenn du
+                alle Ziele erreichst, betragen deine tatsächlichen Kosten nur 50 €.
+                Jede Woche, die du schaffst, bekommst du einen Teil deiner Kaution zurück.
               </p>
             </div>
             <div class="pricing-cta-area">
-              <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="btn-primary">Solicitar mi plaza</a>
+              <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="btn-primary">Meinen Platz sichern</a>
               <p class="pricing-cta-note">
-                Objetivos definidos antes de empezar · Condiciones transparentes
+                Ziele werden vor dem Start definiert · Transparente Bedingungen
               </p>
             </div>
           </div>
-        </div><!-- /pricing-card -->
+        </div>
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         REGLAS DEL RETO
-    ════════════════════════════ -->
+    <!-- REGELN DER CHALLENGE -->
     <section id="reglas" aria-labelledby="reglas-heading">
       <div class="container">
-        <span class="label label-line reveal">Cómo funciona el reto</span>
-        <h2 id="reglas-heading" class="reveal">Las 8 reglas del sistema.</h2>
+        <span class="label label-line reveal">Wie die Challenge funktioniert</span>
+        <h2 id="reglas-heading" class="reveal">Die 8 Regeln des Systems.</h2>
         <p class="reglas-intro reveal reveal-delay-1">
-          Nada de letra pequeña. Estas son las reglas exactas del programa,
-          para que sepas exactamente a qué te comprometes desde el primer día.
+          Kein Kleingedrucktes. Dies sind die genauen Regeln des Programms,
+          damit du vom ersten Tag an weißt, worauf du dich einlässt.
         </p>
 
         <ol class="reglas-grid" style="list-style:none">
           <li class="regla-card reveal">
             <div class="regla-num" aria-hidden="true">01</div>
-            <h4>Objetivo definido antes de empezar</h4>
-            <p>Tu objetivo de peso y tiempo se pacta contigo antes de activar la fianza. Sin sorpresas ni cambios unilaterales.</p>
+            <h4>Ziel wird vor dem Start festgelegt</h4>
+            <p>Dein Gewichts- und Zeitziel wird mit dir vereinbart, bevor die Kaution aktiviert wird. Keine Überraschungen.</p>
           </li>
           <li class="regla-card reveal reveal-delay-1">
             <div class="regla-num" aria-hidden="true">02</div>
-            <h4>Check-in semanal obligatorio</h4>
-            <p>Cada semana envías foto con báscula y medidas. Si no hay check-in, la semana no se contabiliza como cumplida.</p>
+            <h4>Wöchentliches Check-in ist Pflicht</h4>
+            <p>Jede Woche schickst du ein Foto mit Waage und Maßen. Ohne Check-in gilt die Woche nicht als erfüllt.</p>
           </li>
           <li class="regla-card reveal reveal-delay-2">
             <div class="regla-num" aria-hidden="true">03</div>
-            <h4>La fianza se activa al inicio</h4>
-            <p>Los 199 € de fianza se depositan al empezar el programa. Son tuyo: los recuperas si cumples.</p>
+            <h4>Kaution wird zu Beginn aktiviert</h4>
+            <p>Die 199 € Kaution werden zu Programmstart hinterlegt. Sie gehört dir: du bekommst sie zurück, wenn du es schaffst.</p>
           </li>
           <li class="regla-card reveal reveal-delay-3">
             <div class="regla-num" aria-hidden="true">04</div>
-            <h4>Devolución proporcional por semana</h4>
-            <p>Cada semana cumplida devuelve una parte de tu fianza. No tienes que esperar al final para recuperar.</p>
+            <h4>Proportionale Rückerstattung pro Woche</h4>
+            <p>Jede erfüllte Woche erstattet einen Teil deiner Kaution. Du musst nicht bis zum Ende warten.</p>
           </li>
           <li class="regla-card reveal">
             <div class="regla-num" aria-hidden="true">05</div>
-            <h4>El plan es tuyo desde el día 1</h4>
-            <p>Recibes tu plan de alimentación y entrenamiento personalizado al inicio del programa, no semana a semana.</p>
+            <h4>Dein Plan gehört dir ab Tag 1</h4>
+            <p>Du erhältst deinen persönlichen Ernährungs- und Trainingsplan zu Beginn des Programms, nicht Woche für Woche.</p>
           </li>
           <li class="regla-card reveal reveal-delay-1">
             <div class="regla-num" aria-hidden="true">06</div>
-            <h4>Sin trampa en la medición</h4>
-            <p>El progreso se evalúa por peso y medidas reales, no por sensaciones ni esfuerzo percibido. Los números no mienten.</p>
+            <h4>Keine Tricks bei der Messung</h4>
+            <p>Der Fortschritt wird anhand von echtem Gewicht und Maßen bewertet, nicht nach Gefühl oder wahrgenommenem Aufwand.</p>
           </li>
           <li class="regla-card reveal reveal-delay-2">
             <div class="regla-num" aria-hidden="true">07</div>
-            <h4>Ajustes ante imprevistos reales</h4>
-            <p>Si hay una lesión o fuerza mayor documentada, se evalúa el caso. El sistema es justo, no rígido.</p>
+            <h4>Anpassungen bei echten Ausnahmefällen</h4>
+            <p>Bei einer dokumentierten Verletzung oder höherer Gewalt wird der Fall bewertet. Das System ist fair, nicht starr.</p>
           </li>
           <li class="regla-card reveal reveal-delay-3">
             <div class="regla-num" aria-hidden="true">08</div>
-            <h4>Si cumples todo, el reto te sale por 50 €</h4>
-            <p>Completas las 8 semanas, alcanzas tu objetivo y recuperas los 199 € íntegros. Tu coste real: el programa.</p>
+            <h4>Schaffst du alles, kostet dich die Challenge nur 50 €</h4>
+            <p>Du absolvierst die 8 Wochen, erreichst dein Ziel und bekommst die vollen 199 € zurück. Deine tatsächlichen Kosten: das Programm.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         EJEMPLO PRÁCTICO
-    ════════════════════════════ -->
+    <!-- PRAXISBEISPIEL -->
     <section id="example" aria-labelledby="example-heading">
       <div class="container">
-        <span class="label label-line reveal">Ejemplo real del sistema</span>
-        <h2 id="example-heading" class="reveal">Así funciona en la práctica.</h2>
+        <span class="label label-line reveal">Praxisbeispiel</span>
+        <h2 id="example-heading" class="reveal">So funktioniert es in der Praxis.</h2>
 
         <div class="example-grid">
-          <!-- Timeline -->
-          <!-- TODO: estos datos son de ejemplo; ajusta semanas, kg y € a tu reto real -->
           <ol class="example-timeline reveal" style="list-style:none">
             <li class="timeline-item">
               <div class="timeline-left" aria-hidden="true">
@@ -411,9 +374,9 @@
                 <div class="timeline-line"></div>
               </div>
               <div class="timeline-content">
-                <div class="timeline-week">Inicio del programa</div>
-                <p class="timeline-desc">Defines tu objetivo: perder hasta 5 kg en 8 semanas. Recibes tu plan y activas la fianza de 199 €.</p>
-                <div class="timeline-amount">Fianza: 199 €</div>
+                <div class="timeline-week">Programmstart</div>
+                <p class="timeline-desc">Du definierst dein Ziel: bis zu 5 kg in 8 Wochen abnehmen. Du erhältst deinen Plan und aktivierst die Kaution von 199 €.</p>
+                <div class="timeline-amount">Kaution: 199 €</div>
               </div>
             </li>
             <li class="timeline-item">
@@ -422,9 +385,9 @@
                 <div class="timeline-line"></div>
               </div>
               <div class="timeline-content">
-                <div class="timeline-week">Semanas 1–2 cumplidas</div>
-                <p class="timeline-desc">Cumples el objetivo semanal. Llevas −1 kg. Recuperas aproximadamente 25 € cada semana.</p>
-                <div class="timeline-amount">Recuperado: ~50 €</div>
+                <div class="timeline-week">Wochen 1–2 geschafft</div>
+                <p class="timeline-desc">Du erreichst dein Wochenziel. Du hast −1 kg. Du bekommst ca. 25 € pro Woche zurück.</p>
+                <div class="timeline-amount">Zurückbekommen: ~50 €</div>
               </div>
             </li>
             <li class="timeline-item">
@@ -433,9 +396,9 @@
                 <div class="timeline-line"></div>
               </div>
               <div class="timeline-content">
-                <div class="timeline-week">Semanas 3–5 cumplidas</div>
-                <p class="timeline-desc">Sigues avanzando. Llevas −3 kg. El sistema recompensa tu constancia semana a semana.</p>
-                <div class="timeline-amount">Recuperado: ~125 €</div>
+                <div class="timeline-week">Wochen 3–5 geschafft</div>
+                <p class="timeline-desc">Du machst weiter Fortschritte. Du hast −3 kg. Das System belohnt deine Beständigkeit Woche für Woche.</p>
+                <div class="timeline-amount">Zurückbekommen: ~125 €</div>
               </div>
             </li>
             <li class="timeline-item">
@@ -443,197 +406,185 @@
                 <div class="timeline-dot active"></div>
               </div>
               <div class="timeline-content">
-                <div class="timeline-week">Semana 8 — objetivo cumplido</div>
-                <p class="timeline-desc">Alcanzas tu objetivo. Llevas −5 kg. Recuperas el total de tu fianza.</p>
-                <div class="timeline-amount">Recuperado: 199 € · Coste real: 50 €</div>
+                <div class="timeline-week">Woche 8 — Ziel erreicht</div>
+                <p class="timeline-desc">Du erreichst dein Ziel. Du hast −5 kg. Du bekommst die gesamte Kaution zurück.</p>
+                <div class="timeline-amount">Zurückbekommen: 199 € · Tatsächliche Kosten: 50 €</div>
               </div>
             </li>
           </ol>
 
-          <!-- Resumen sticky -->
-          <aside class="example-summary reveal reveal-delay-2" aria-label="Resumen del reto de ejemplo">
+          <aside class="example-summary reveal reveal-delay-2" aria-label="Challenge-Zusammenfassung">
             <div class="summary-header">
-              <h4>Resumen del reto</h4>
-              <!-- TODO: indica que son datos de ejemplo -->
-              <p>Datos orientativos del ejemplo</p>
+              <h4>Challenge-Übersicht</h4>
+              <p>Beispieldaten zur Orientierung</p>
             </div>
             <dl class="summary-rows">
               <div class="summary-row">
-                <dt class="sr-label">Duración</dt>
-                <dd class="sr-value">8 semanas</dd>
+                <dt class="sr-label">Dauer</dt>
+                <dd class="sr-value">8 Wochen</dd>
               </div>
               <div class="summary-row">
-                <dt class="sr-label">Objetivo ejemplo</dt>
+                <dt class="sr-label">Beispielziel</dt>
                 <dd class="sr-value">−5 kg</dd>
               </div>
               <div class="summary-row">
-                <dt class="sr-label">Fianza inicial</dt>
+                <dt class="sr-label">Anfangskaution</dt>
                 <dd class="sr-value">199 €</dd>
               </div>
               <div class="summary-row">
-                <dt class="sr-label">Devolución aprox./semana</dt>
+                <dt class="sr-label">Rückerstattung ca./Woche</dt>
                 <dd class="sr-value">~25 €</dd>
               </div>
               <div class="summary-row">
-                <dt class="sr-label">Precio del programa</dt>
+                <dt class="sr-label">Programmpreis</dt>
                 <dd class="sr-value">50 €</dd>
               </div>
               <div class="summary-row sr-highlight">
-                <dt class="sr-label">Si cumples todo</dt>
-                <dd class="sr-value">Coste real: 50 €</dd>
+                <dt class="sr-label">Wenn du alles schaffst</dt>
+                <dd class="sr-value">Tatsächliche Kosten: 50 €</dd>
               </div>
             </dl>
-            <!-- TODO: sustituye por el texto legal real sobre condiciones de devolución -->
             <p class="summary-foot">
-              Los objetivos, importes y condiciones pueden variar según cada
-              persona. Todo se define de forma individual antes de empezar.
+              Ziele, Beträge und Bedingungen können je nach Person variieren.
+              Alles wird individuell vor dem Start festgelegt.
             </p>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         QUÉ INCLUYE
-    ════════════════════════════ -->
+    <!-- WAS ENTHALTEN IST -->
     <section id="includes" aria-labelledby="includes-heading">
       <div class="container">
-        <span class="label label-line reveal">Qué incluye</span>
-        <h2 id="includes-heading" class="reveal">Todo lo que necesitas para cumplir.</h2>
+        <span class="label label-line reveal">Was enthalten ist</span>
+        <h2 id="includes-heading" class="reveal">Alles, was du brauchst, um es zu schaffen.</h2>
 
         <ul class="includes-grid" style="list-style:none">
           <li class="include-card reveal">
             <div class="include-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
             </div>
-            <h4>Plan de alimentación personalizado</h4>
-            <p>Diseñado según tus objetivos, hábitos y estilo de vida.</p>
+            <h4>Persönlicher Ernährungsplan</h4>
+            <p>Entwickelt nach deinen Zielen, Gewohnheiten und Lebensstil.</p>
           </li>
           <li class="include-card reveal reveal-delay-1">
             <div class="include-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
-            <h4>Plan de entrenamiento adaptado</h4>
-            <p>Para gimnasio o en casa, según tus posibilidades y nivel.</p>
+            <h4>Angepasster Trainingsplan</h4>
+            <p>Für Fitnessstudio oder zuhause, je nach deinen Möglichkeiten und Level.</p>
           </li>
           <li class="include-card reveal reveal-delay-2">
             <div class="include-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
-            <h4>Seguimiento semanal</h4>
-            <p>Revisamos tu progreso cada semana para ajustar el plan.</p>
+            <h4>Wöchentliches Tracking</h4>
+            <p>Wir überprüfen deinen Fortschritt jede Woche, um den Plan anzupassen.</p>
           </li>
           <li class="include-card reveal">
             <div class="include-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
             </div>
-            <h4>Control de peso y medidas</h4>
-            <p>Datos objetivos que reflejan tu avance real.</p>
+            <h4>Gewichts- und Maßkontrolle</h4>
+            <p>Objektive Daten, die deinen echten Fortschritt widerspiegeln.</p>
           </li>
           <li class="include-card reveal reveal-delay-1">
             <div class="include-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
             </div>
-            <h4>Ajustes según evolución</h4>
-            <p>El plan se adapta a tu progreso real.</p>
+            <h4>Anpassungen nach Entwicklung</h4>
+            <p>Der Plan passt sich deinem tatsächlichen Fortschritt an.</p>
           </li>
           <li class="include-card reveal reveal-delay-2">
             <div class="include-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
             </div>
-            <h4>Sistema de fianza reembolsable</h4>
-            <p>La herramienta de compromiso que convierte intención en acción.</p>
+            <h4>Rückerstattbares Kautionssystem</h4>
+            <p>Das Commitment-Tool, das Absicht in Aktion verwandelt.</p>
           </li>
           <li class="include-card reveal">
             <div class="include-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
-            <h4>Acompañamiento completo</h4>
-            <p>Estás acompañado durante todo el proceso, no solo al inicio.</p>
+            <h4>Vollständige Begleitung</h4>
+            <p>Du wirst während des gesamten Prozesses begleitet, nicht nur am Anfang.</p>
           </li>
           <li class="include-card reveal reveal-delay-1">
             <div class="include-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             </div>
-            <h4>Motivación y responsabilidad</h4>
-            <p>Un sistema que te mantiene firme más allá de la motivación inicial.</p>
+            <h4>Motivation und Verantwortlichkeit</h4>
+            <p>Ein System, das dich über die anfängliche Motivation hinaus standhaft hält.</p>
           </li>
           <li class="include-card reveal reveal-delay-2">
             <div class="include-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
-            <h4>Revisión de hábitos</h4>
-            <p>Trabajamos sobre la causa real del problema, no solo los síntomas.</p>
+            <h4>Gewohnheitsanalyse</h4>
+            <p>Wir arbeiten an der eigentlichen Ursache des Problems, nicht nur an den Symptomen.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         SECCIÓN EMOCIONAL
-    ════════════════════════════ -->
+    <!-- EMOTIONAL -->
     <section id="emotional" aria-labelledby="emotional-heading">
       <div class="container">
         <div class="emotional-content">
-          <span class="label label-line reveal" style="display:inline-flex;justify-content:center">El sistema</span>
+          <span class="label label-line reveal" style="display:inline-flex;justify-content:center">Das System</span>
           <h2 id="emotional-heading" class="reveal">
-            Esta vez no estás pagando<br>por intentarlo.<br>
-            Estás invirtiendo en cumplirlo.
+            Diesmal zahlst du nicht dafür,<br>es zu versuchen.<br>
+            Du investierst darin, es zu schaffen.
           </h2>
           <p class="reveal reveal-delay-1">
-            La mayoría de las personas no falla porque no quiera cambiar.
-            Falla porque empieza sin estructura, sin seguimiento y sin una
-            consecuencia real cuando abandona. Este programa cambia las
-            reglas: tienes un plan, tienes una meta y tienes un motivo extra
-            para mantenerte firme.
+            Die meisten Menschen scheitern nicht, weil sie sich nicht verändern wollen.
+            Sie scheitern, weil sie ohne Struktur, ohne Begleitung und ohne
+            echte Konsequenz bei Aufgabe beginnen. Dieses Programm ändert
+            die Regeln: Du hast einen Plan, ein Ziel und einen extra Grund,
+            standhaft zu bleiben.
           </p>
           <div class="quote-block reveal reveal-delay-2">
-            <blockquote>Tu compromiso ahora tiene valor.</blockquote>
+            <blockquote>Dein Engagement hat jetzt einen Wert.</blockquote>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         ELIGE TU DIFÍCIL
-    ════════════════════════════ -->
+    <!-- WÄHLE DEIN SCHWIERIG -->
     <section id="elige" aria-labelledby="elige-heading">
       <div class="elige-split">
 
-        <!-- Panel izquierdo: el difícil cómodo -->
         <div class="elige-panel elige-panel--left" aria-hidden="true">
           <div class="elige-panel-inner">
-            <div class="elige-panel-tag">El camino de siempre</div>
+            <div class="elige-panel-tag">Der alte Weg</div>
             <ul class="elige-list elige-list--bad">
-              <li>Empiezas el lunes</li>
-              <li>Abandonas a las 2 semanas</li>
-              <li>Sin estructura ni seguimiento</li>
-              <li>El mismo ciclo, otra vez</li>
-              <li>Sin resultados reales</li>
+              <li>Du fängst am Montag an</li>
+              <li>Du gibst nach 2 Wochen auf</li>
+              <li>Keine Struktur, kein Tracking</li>
+              <li>Derselbe Kreislauf, wieder</li>
+              <li>Keine echten Ergebnisse</li>
             </ul>
           </div>
           <div class="elige-panel-glow elige-panel-glow--left" aria-hidden="true"></div>
         </div>
 
-        <!-- Centro: titular -->
         <div class="elige-center">
           <p class="elige-sub" id="elige-heading">
-            Los dos son difíciles.<br>Solo uno te cambia la vida.
+            Beides ist schwer.<br>Nur eines verändert dein Leben.
           </p>
-          <p class="elige-headline">Elige tu difícil.</p>
-          <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="btn-primary">Solicitar mi plaza</a>
+          <p class="elige-headline">Wähle dein Schwierig.</p>
+          <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="btn-primary">Meinen Platz sichern</a>
         </div>
 
-        <!-- Panel derecho: el difícil que vale -->
         <div class="elige-panel elige-panel--right" aria-hidden="true">
           <div class="elige-panel-inner">
-            <div class="elige-panel-tag">Con Transform·Lab</div>
+            <div class="elige-panel-tag">Mit Transform·Lab</div>
             <ul class="elige-list elige-list--good">
-              <li>Objetivo claro desde el día 1</li>
-              <li>Plan personalizado para ti</li>
-              <li>Seguimiento semanal real</li>
-              <li>Fianza que te mantiene firme</li>
-              <li>Resultados medibles</li>
+              <li>Klares Ziel ab Tag 1</li>
+              <li>Persönlicher Plan für dich</li>
+              <li>Echtes wöchentliches Tracking</li>
+              <li>Kaution hält dich auf Kurs</li>
+              <li>Messbare Ergebnisse</li>
             </ul>
           </div>
           <div class="elige-panel-glow elige-panel-glow--right" aria-hidden="true"></div>
@@ -642,116 +593,112 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         BENEFICIOS
-    ════════════════════════════ -->
+    <!-- VORTEILE -->
     <section id="benefits" aria-labelledby="benefits-heading">
       <div class="container">
-        <span class="label label-line reveal">Beneficios</span>
-        <h2 id="benefits-heading" class="reveal">Lo que consigues con el sistema.</h2>
+        <span class="label label-line reveal">Vorteile</span>
+        <h2 id="benefits-heading" class="reveal">Was du mit dem System erreichst.</h2>
 
         <ul class="benefits-grid" style="list-style:none">
           <li class="benefit-item reveal">
             <div class="benefit-check" aria-hidden="true">↗</div>
-            <h4>Más compromiso</h4>
-            <p>Tu dinero en juego cambia el nivel de implicación.</p>
+            <h4>Mehr Engagement</h4>
+            <p>Dein Geld im Spiel verändert dein Commitment-Level.</p>
           </li>
           <li class="benefit-item reveal reveal-delay-1">
             <div class="benefit-check" aria-hidden="true">↗</div>
-            <h4>Más disciplina</h4>
-            <p>Un sistema claro genera hábitos duraderos.</p>
+            <h4>Mehr Disziplin</h4>
+            <p>Ein klares System schafft dauerhafte Gewohnheiten.</p>
           </li>
           <li class="benefit-item reveal reveal-delay-2">
             <div class="benefit-check" aria-hidden="true">↗</div>
-            <h4>Menos excusas</h4>
-            <p>La estructura elimina la ambigüedad y las justificaciones.</p>
+            <h4>Weniger Ausreden</h4>
+            <p>Die Struktur eliminiert Unklarheit und Rechtfertigungen.</p>
           </li>
           <li class="benefit-item reveal reveal-delay-3">
             <div class="benefit-check" aria-hidden="true">↗</div>
-            <h4>Objetivos medibles</h4>
-            <p>Sabes exactamente qué necesitas lograr cada semana.</p>
+            <h4>Messbare Ziele</h4>
+            <p>Du weißt genau, was du jede Woche erreichen musst.</p>
           </li>
           <li class="benefit-item reveal">
             <div class="benefit-check" aria-hidden="true">↗</div>
-            <h4>Recompensa económica</h4>
-            <p>El cumplimiento tiene un retorno tangible y concreto.</p>
+            <h4>Finanzielle Belohnung</h4>
+            <p>Das Erreichen deiner Ziele hat eine greifbare und konkrete Rendite.</p>
           </li>
           <li class="benefit-item reveal reveal-delay-1">
             <div class="benefit-check" aria-hidden="true">↗</div>
-            <h4>Plan adaptado a tu vida</h4>
-            <p>No seguimos plantillas genéricas. Todo es para ti.</p>
+            <h4>Plan angepasst an dein Leben</h4>
+            <p>Keine generischen Vorlagen. Alles ist für dich.</p>
           </li>
           <li class="benefit-item reveal reveal-delay-2">
             <div class="benefit-check" aria-hidden="true">↗</div>
-            <h4>Transformación real</h4>
-            <p>Física, mental y de hábitos. Un cambio que se mantiene.</p>
+            <h4>Echte Transformation</h4>
+            <p>Körperlich, mental und in den Gewohnheiten. Eine Veränderung, die bleibt.</p>
           </li>
           <li class="benefit-item reveal reveal-delay-3">
             <div class="benefit-check" aria-hidden="true">↗</div>
-            <h4>Seguimiento continuo</h4>
-            <p>No desaparecemos tras entregarte el plan.</p>
+            <h4>Kontinuierliche Begleitung</h4>
+            <p>Wir verschwinden nicht, nachdem wir dir den Plan übergeben haben.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         COMPARATIVA
-    ════════════════════════════ -->
+    <!-- VERGLEICH -->
     <section id="comparison" aria-labelledby="comparison-heading">
       <div class="container">
-        <span class="label label-line reveal">Comparativa</span>
-        <h2 id="comparison-heading" class="reveal">La diferencia está en el sistema.</h2>
+        <span class="label label-line reveal">Vergleich</span>
+        <h2 id="comparison-heading" class="reveal">Der Unterschied liegt im System.</h2>
 
         <div class="comparison-grid">
           <div class="comparison-col col-them reveal">
-            <div class="comparison-header">Dieta tradicional</div>
+            <div class="comparison-header">Traditionelle Diät</div>
             <ul class="comparison-items" style="list-style:none">
               <li class="comparison-item">
                 <div class="ci-icon" aria-hidden="true">✕</div>
-                <p>Empiezas motivado, pero sin estructura real</p>
+                <p>Du startest motiviert, aber ohne echte Struktur</p>
               </li>
               <li class="comparison-item">
                 <div class="ci-icon" aria-hidden="true">✕</div>
-                <p>No tienes seguimiento semanal ni rendición de cuentas</p>
+                <p>Kein wöchentliches Tracking, keine Rechenschaftspflicht</p>
               </li>
               <li class="comparison-item">
                 <div class="ci-icon" aria-hidden="true">✕</div>
-                <p>Abandonas cuando aparecen las excusas</p>
+                <p>Du gibst auf, wenn die Ausreden kommen</p>
               </li>
               <li class="comparison-item">
                 <div class="ci-icon" aria-hidden="true">✕</div>
-                <p>Nadie mide tu progreso de forma objetiva</p>
+                <p>Niemand misst deinen Fortschritt objektiv</p>
               </li>
               <li class="comparison-item">
                 <div class="ci-icon" aria-hidden="true">✕</div>
-                <p>Pierdes tu dinero aunque no cumplas</p>
+                <p>Du verlierst dein Geld, auch wenn du es nicht schaffst</p>
               </li>
             </ul>
           </div>
 
           <div class="comparison-col col-ours reveal reveal-delay-2">
-            <div class="comparison-header">Nuestro sistema</div>
+            <div class="comparison-header">Unser System</div>
             <ul class="comparison-items" style="list-style:none">
               <li class="comparison-item">
                 <div class="ci-icon" aria-hidden="true">✓</div>
-                <p>Tienes un objetivo claro y realista desde el primer día</p>
+                <p>Du hast ein klares, realistisches Ziel vom ersten Tag an</p>
               </li>
               <li class="comparison-item">
                 <div class="ci-icon" aria-hidden="true">✓</div>
-                <p>Seguimiento semanal que mide tu progreso real</p>
+                <p>Wöchentliches Tracking, das deinen echten Fortschritt misst</p>
               </li>
               <li class="comparison-item">
                 <div class="ci-icon" aria-hidden="true">✓</div>
-                <p>Una fianza que te mantiene comprometido más allá de la motivación</p>
+                <p>Eine Kaution, die dich über die Motivation hinaus committet hält</p>
               </li>
               <li class="comparison-item">
                 <div class="ci-icon" aria-hidden="true">✓</div>
-                <p>Cada semana cuenta. Cada avance tiene recompensa</p>
+                <p>Jede Woche zählt. Jeder Fortschritt wird belohnt</p>
               </li>
               <li class="comparison-item">
                 <div class="ci-icon" aria-hidden="true">✓</div>
-                <p>Si cumples, recuperas tu dinero. El sistema trabaja a tu favor</p>
+                <p>Wenn du es schaffst, bekommst du dein Geld zurück. Das System arbeitet für dich</p>
               </li>
             </ul>
           </div>
@@ -759,465 +706,442 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         AVISO DE SALUD / LEGAL
-    ════════════════════════════ -->
+    <!-- RECHTLICHER HINWEIS -->
     <section id="disclaimer" aria-labelledby="disclaimer-heading">
       <div class="container">
         <div class="disclaimer-box reveal">
-          <h3 id="disclaimer-heading">Información importante</h3>
-          <!-- TODO: revisa y adapta este aviso legal con tu asesor jurídico -->
+          <h3 id="disclaimer-heading">Wichtiger Hinweis</h3>
           <p>
-            Este programa está diseñado para personas adultas sanas que desean
-            perder peso de forma progresiva y controlada. No sustituye en
-            ningún caso el asesoramiento médico ni el tratamiento de ninguna
-            enfermedad o condición de salud.
+            Dieses Programm ist für gesunde Erwachsene konzipiert, die schrittweise
+            und kontrolliert abnehmen möchten. Es ersetzt in keinem Fall ärztliche
+            Beratung oder die Behandlung von Krankheiten oder Gesundheitszuständen.
           </p>
           <p>
-            Si tienes problemas de salud, lesiones, embarazo, trastornos
-            alimentarios, medicación activa o cualquier otra condición médica
-            relevante, consulta antes con un profesional de la salud antes de
-            iniciar el programa.
+            Wenn du gesundheitliche Probleme, Verletzungen, Schwangerschaft,
+            Essstörungen, aktive Medikation oder andere relevante medizinische
+            Zustände hast, wende dich bitte vor Programmbeginn an einen Arzt.
           </p>
-          <!-- TODO: añade aquí las condiciones legales específicas del depósito/fianza
-               (plazos de devolución, criterios de evaluación semanal, etc.) -->
           <p>
-            No prometemos resultados milagrosos ni resultados garantizados para
-            todo el mundo. Trabajamos con objetivos realistas, definidos de
-            forma individual, y con seguimiento y compromiso por parte del
-            participante. Los resultados dependen del cumplimiento y de las
-            circunstancias personales de cada persona.
+            Wir versprechen keine Wunderergebnisse oder garantierte Ergebnisse
+            für alle. Wir arbeiten mit realistischen, individuell definierten
+            Zielen und mit Tracking und Commitment seitens des Teilnehmers.
+            Die Ergebnisse hängen von der Einhaltung und den persönlichen
+            Umständen jeder Person ab.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         FAQ
-    ════════════════════════════ -->
+    <!-- FAQ -->
     <section id="faq" aria-labelledby="faq-heading">
       <div class="container">
-        <span class="label label-line reveal">Preguntas frecuentes</span>
-        <h2 id="faq-heading" class="reveal">Todo lo que necesitas saber.</h2>
+        <span class="label label-line reveal">Häufige Fragen</span>
+        <h2 id="faq-heading" class="reveal">Alles, was du wissen musst.</h2>
 
         <div class="faq-list reveal" role="list">
 
           <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false"
-                    aria-controls="faq-answer-1">
-              ¿Realmente me devuelven dinero?
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+              Bekomme ich wirklich Geld zurück?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-1" role="region">
-              <!-- TODO: ajusta el importe máximo de devolución -->
               <div class="faq-answer-inner">
-                Sí. Si cumples los objetivos semanales acordados, recuperas la
-                parte proporcional de tu fianza correspondiente a esa semana.
-                Si completas el programa entero, puedes recuperar hasta 199 €.
+                Ja. Wenn du die vereinbarten Wochenziele erreichst, bekommst du den
+                proportionalen Teil deiner Kaution für diese Woche zurück.
+                Wenn du das gesamte Programm abschließt, kannst du bis zu 199 € zurückbekommen.
               </div>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false"
-                    aria-controls="faq-answer-2">
-              ¿Qué pasa si no cumplo una semana?
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+              Was passiert, wenn ich eine Woche nicht schaffe?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-2" role="region">
               <div class="faq-answer-inner">
-                Esa parte de la fianza correspondiente a la semana no cumplida
-                no se devuelve. El resto del programa sigue activo y puedes
-                seguir recuperando la fianza de las semanas restantes.
+                Der Kautions-Anteil der nicht erfüllten Woche wird nicht zurückerstattet.
+                Das restliche Programm bleibt aktiv und du kannst weiterhin die Kaution
+                der verbleibenden Wochen zurückbekommen.
               </div>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false"
-                    aria-controls="faq-answer-3">
-              ¿Quién define mi objetivo?
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+              Wer legt mein Ziel fest?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-3" role="region">
               <div class="faq-answer-inner">
-                El objetivo se define contigo, de forma conjunta y realista,
-                según tu situación de partida, tu historial, tu disponibilidad
-                y tus condiciones físicas. Nunca imponemos metas inalcanzables.
+                Das Ziel wird gemeinsam mit dir und realistisch festgelegt,
+                basierend auf deiner Ausgangssituation, deiner Geschichte,
+                deiner Verfügbarkeit und deinen körperlichen Bedingungen.
+                Wir setzen niemals unerreichbare Ziele.
               </div>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false"
-                    aria-controls="faq-answer-4">
-              ¿Tengo que ir al gimnasio?
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+              Muss ich ins Fitnessstudio gehen?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-4" role="region">
               <div class="faq-answer-inner">
-                No necesariamente. Diseñamos el plan de entrenamiento según tus
-                posibilidades. Puede ser para gimnasio o para casa, con o sin
-                material.
+                Nicht unbedingt. Wir gestalten den Trainingsplan nach deinen
+                Möglichkeiten. Er kann für das Fitnessstudio oder zuhause sein,
+                mit oder ohne Equipment.
               </div>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false"
-                    aria-controls="faq-answer-5">
-              ¿Puedo recuperar toda la fianza?
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+              Kann ich die gesamte Kaution zurückbekommen?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-5" role="region">
-              <!-- TODO: confirma el importe total con tu abogado/gestor -->
               <div class="faq-answer-inner">
-                Sí. Si cumples todos los objetivos acordados durante el
-                programa, puedes recuperar hasta el total de los 199 € de
-                fianza. Tu coste real final sería únicamente el precio del
-                programa: 50 €.
+                Ja. Wenn du alle vereinbarten Ziele während des Programms erreichst,
+                kannst du bis zu den vollen 199 € Kaution zurückbekommen.
+                Deine tatsächlichen Endkosten wären nur der Programmpreis: 50 €.
               </div>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false"
-                    aria-controls="faq-answer-6">
-              ¿La fianza es obligatoria?
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+              Ist die Kaution Pflicht?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-6" role="region">
               <div class="faq-answer-inner">
-                Sí. La fianza es parte esencial del sistema de compromiso.
-                Sin ella, el programa no funciona como está diseñado. Es lo
-                que convierte la intención en compromiso real.
+                Ja. Die Kaution ist ein wesentlicher Teil des Commitment-Systems.
+                Ohne sie funktioniert das Programm nicht wie vorgesehen. Sie ist das,
+                was Absicht in echtes Engagement verwandelt.
               </div>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false"
-                    aria-controls="faq-answer-7">
-              ¿Qué pasa si tengo una lesión o problema médico?
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
+              Was ist, wenn ich eine Verletzung oder ein medizinisches Problem habe?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-7" role="region">
               <div class="faq-answer-inner">
-                Debes comunicarlo antes de empezar. En algunos casos será
-                necesario consultar con un médico previamente o adaptar el
-                programa. Tu salud siempre es la prioridad.
+                Du musst es vor Beginn mitteilen. In manchen Fällen ist es
+                notwendig, vorher einen Arzt zu konsultieren oder das Programm
+                anzupassen. Deine Gesundheit hat immer Vorrang.
               </div>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false"
-                    aria-controls="faq-answer-8">
-              ¿Cuánto dura el programa?
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-8">
+              Wie lange dauert das Programm?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-8" role="region">
-              <!-- TODO: ajusta si ofreces duraciones distintas -->
               <div class="faq-answer-inner">
-                El ejemplo principal es de 8 semanas, pero la duración puede
-                adaptarse según el objetivo de cada persona. Lo definimos
-                juntos en la evaluación inicial.
+                Das Hauptbeispiel umfasst 8 Wochen, aber die Dauer kann
+                je nach Ziel der Person angepasst werden. Wir legen es
+                gemeinsam in der Erstbewertung fest.
               </div>
             </div>
           </div>
 
           <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false"
-                    aria-controls="faq-answer-9">
-              ¿Qué incluye exactamente el plan?
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-9">
+              Was ist genau im Plan enthalten?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-9" role="region">
               <div class="faq-answer-inner">
-                Incluye plan de alimentación personalizado, plan de
-                entrenamiento adaptado, seguimiento semanal, control de
-                progreso con peso y medidas, ajustes según evolución,
-                acompañamiento continuo y el sistema de fianza reembolsable.
+                Enthalten sind: persönlicher Ernährungsplan, angepasster
+                Trainingsplan, wöchentliches Tracking, Fortschrittskontrolle
+                mit Gewicht und Maßen, Anpassungen nach Entwicklung,
+                kontinuierliche Begleitung und das rückerstattbare Kautionssystem.
               </div>
             </div>
           </div>
 
-        </div><!-- /faq-list -->
+        </div>
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         URGENCIA / PLAZAS LIMITADAS
-    ════════════════════════════ -->
+    <!-- BEGRENZTE PLÄTZE -->
     <section id="urgencia" aria-labelledby="urgencia-heading">
       <div class="container">
         <div class="urgencia-box reveal">
           <div class="urgencia-icon" aria-hidden="true">⏳</div>
           <div class="urgencia-content">
-            <h3 id="urgencia-heading">Plazas limitadas para el reto de lanzamiento</h3>
+            <h3 id="urgencia-heading">Begrenzte Plätze für die Launch-Challenge</h3>
             <p>
-              Esta es la primera convocatoria de Transform·Lab. Aceptamos un número
-              muy reducido de participantes para garantizar el seguimiento personalizado.
-              Una vez cubiertas las plazas, la siguiente convocatoria no tiene fecha abierta.
+              Dies ist die erste Runde von Transform·Lab. Wir nehmen eine sehr
+              begrenzte Anzahl von Teilnehmern an, um die persönliche Begleitung
+              zu garantieren. Sobald die Plätze vergeben sind, gibt es keinen
+              festen Termin für die nächste Runde.
             </p>
             <ul class="urgencia-list" style="list-style:none">
-              <li><span aria-hidden="true">→</span> Precio de lanzamiento: solo disponible en esta convocatoria</li>
-              <li><span aria-hidden="true">→</span> Atención personalizada garantizada para cada participante</li>
-              <li><span aria-hidden="true">→</span> Las solicitudes se revisan y confirman por orden de llegada</li>
+              <li><span aria-hidden="true">→</span> Einführungspreis: nur in dieser Runde verfügbar</li>
+              <li><span aria-hidden="true">→</span> Persönliche Betreuung für jeden Teilnehmer garantiert</li>
+              <li><span aria-hidden="true">→</span> Anfragen werden in der Reihenfolge des Eingangs bestätigt</li>
             </ul>
           </div>
-          <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="btn-primary urgencia-cta">Solicitar mi plaza ahora</a>
+          <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="btn-primary urgencia-cta">Jetzt meinen Platz sichern</a>
         </div>
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         FORMULARIO DE SOLICITUD
-    ════════════════════════════ -->
+    <!-- ANMELDEFORMULAR -->
     <section id="form" aria-labelledby="form-heading">
       <div class="container">
-        <span class="label label-line reveal">Solicitud de plaza</span>
-        <h2 id="form-heading" class="reveal">Cuéntanos un poco sobre ti.</h2>
+        <span class="label label-line reveal">Platz anfragen</span>
+        <h2 id="form-heading" class="reveal">Erzähl uns etwas über dich.</h2>
         <p class="form-intro reveal reveal-delay-1">
-          Rellena el formulario con la mayor honestidad posible. Usamos estos datos
-          para valorar si el programa es adecuado para ti y para preparar tu plan personalizado.
-          No te compromete a nada hasta que confirmemos tu plaza.
+          Fülle das Formular so ehrlich wie möglich aus. Wir verwenden diese Daten,
+          um zu beurteilen, ob das Programm für dich geeignet ist, und um deinen
+          persönlichen Plan vorzubereiten. Es verpflichtet dich zu nichts, bis wir
+          deinen Platz bestätigen.
         </p>
 
         <form class="solicitud-form reveal reveal-delay-2" id="solicitudForm" onsubmit="return false;" novalidate>
 
-          <!-- BLOQUE 1: Datos básicos -->
+          <!-- BLOCK 1: Grunddaten -->
           <fieldset class="form-block">
             <legend class="form-block-title">
               <span class="form-block-num" aria-hidden="true">01</span>
-              Datos básicos
+              Grunddaten
             </legend>
             <div class="form-row form-row--2">
               <div class="form-group">
-                <label for="f-nombre">Nombre completo</label>
-                <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
+                <label for="f-nombre">Vollständiger Name</label>
+                <input type="text" id="f-nombre" name="nombre" placeholder="Dein Name" autocomplete="name">
               </div>
               <div class="form-group">
-                <label for="f-email">Email</label>
-                <input type="email" id="f-email" name="email" placeholder="tu@email.com" autocomplete="email">
+                <label for="f-email">E-Mail</label>
+                <input type="email" id="f-email" name="email" placeholder="deine@email.de" autocomplete="email">
               </div>
             </div>
             <div class="form-row form-row--2">
               <div class="form-group">
-                <label for="f-edad">Edad</label>
-                <input type="number" id="f-edad" name="edad" placeholder="Ej: 32" min="18" max="70">
+                <label for="f-edad">Alter</label>
+                <input type="number" id="f-edad" name="edad" placeholder="z.B. 32" min="18" max="70">
               </div>
               <div class="form-group">
-                <label for="f-sexo">Sexo</label>
+                <label for="f-sexo">Geschlecht</label>
                 <select id="f-sexo" name="sexo">
-                  <option value="" disabled selected>Selecciona</option>
-                  <option value="hombre">Hombre</option>
-                  <option value="mujer">Mujer</option>
-                  <option value="otro">Otro / Prefiero no decir</option>
+                  <option value="" disabled selected>Auswählen</option>
+                  <option value="mann">Mann</option>
+                  <option value="frau">Frau</option>
+                  <option value="andere">Andere / Keine Angabe</option>
                 </select>
               </div>
             </div>
           </fieldset>
 
-          <!-- BLOQUE 2: Objetivo físico -->
+          <!-- BLOCK 2: Körperliches Ziel -->
           <fieldset class="form-block">
             <legend class="form-block-title">
               <span class="form-block-num" aria-hidden="true">02</span>
-              Objetivo físico
+              Körperliches Ziel
             </legend>
             <div class="form-row form-row--3">
               <div class="form-group">
-                <label for="f-peso-actual">Peso actual (kg)</label>
-                <input type="number" id="f-peso-actual" name="peso_actual" placeholder="Ej: 90">
+                <label for="f-peso-actual">Aktuelles Gewicht (kg)</label>
+                <input type="number" id="f-peso-actual" name="peso_actual" placeholder="z.B. 90">
               </div>
               <div class="form-group">
-                <label for="f-altura">Altura (cm)</label>
-                <input type="number" id="f-altura" name="altura" placeholder="Ej: 175">
+                <label for="f-altura">Größe (cm)</label>
+                <input type="number" id="f-altura" name="altura" placeholder="z.B. 175">
               </div>
               <div class="form-group">
-                <label for="f-peso-objetivo">Peso objetivo (kg)</label>
-                <input type="number" id="f-peso-objetivo" name="peso_objetivo" placeholder="Ej: 82">
+                <label for="f-peso-objetivo">Zielgewicht (kg)</label>
+                <input type="number" id="f-peso-objetivo" name="peso_objetivo" placeholder="z.B. 82">
               </div>
             </div>
             <div class="form-group">
-              <label>Objetivo principal</label>
-              <div class="radio-grid" role="radiogroup" aria-label="Objetivo principal">
+              <label>Hauptziel</label>
+              <div class="radio-grid" role="radiogroup" aria-label="Hauptziel">
                 <label class="radio-card">
-                  <input type="radio" name="objetivo" value="perder_grasa">
-                  <span class="radio-label">Perder grasa</span>
+                  <input type="radio" name="objetivo" value="fett_verlieren">
+                  <span class="radio-label">Fett verlieren</span>
                 </label>
                 <label class="radio-card">
-                  <input type="radio" name="objetivo" value="ganar_musculo">
-                  <span class="radio-label">Ganar músculo</span>
+                  <input type="radio" name="objetivo" value="muskeln_aufbauen">
+                  <span class="radio-label">Muskeln aufbauen</span>
                 </label>
                 <label class="radio-card">
-                  <input type="radio" name="objetivo" value="definicion">
-                  <span class="radio-label">Definición</span>
+                  <input type="radio" name="objetivo" value="definition">
+                  <span class="radio-label">Definition</span>
                 </label>
                 <label class="radio-card">
-                  <input type="radio" name="objetivo" value="mejorar_habitos">
-                  <span class="radio-label">Mejorar hábitos</span>
+                  <input type="radio" name="objetivo" value="gewohnheiten">
+                  <span class="radio-label">Gewohnheiten verbessern</span>
                 </label>
               </div>
             </div>
           </fieldset>
 
-          <!-- BLOQUE 3: Alimentación -->
+          <!-- BLOCK 3: Ernährung -->
           <fieldset class="form-block">
             <legend class="form-block-title">
               <span class="form-block-num" aria-hidden="true">03</span>
-              Alimentación
+              Ernährung
             </legend>
             <div class="form-row form-row--2">
               <div class="form-group">
-                <label for="f-alergias">Alergias alimentarias</label>
-                <input type="text" id="f-alergias" name="alergias" placeholder="Ej: frutos secos, marisco...">
+                <label for="f-alergias">Lebensmittelallergien</label>
+                <input type="text" id="f-alergias" name="alergias" placeholder="z.B. Nüsse, Meeresfrüchte...">
               </div>
               <div class="form-group">
-                <label for="f-intolerancias">Intolerancias</label>
-                <input type="text" id="f-intolerancias" name="intolerancias" placeholder="Ej: lactosa, gluten...">
+                <label for="f-intolerancias">Unverträglichkeiten</label>
+                <input type="text" id="f-intolerancias" name="intolerancias" placeholder="z.B. Laktose, Gluten...">
               </div>
             </div>
             <div class="form-row form-row--2">
               <div class="form-group">
-                <label for="f-dieta">Tipo de dieta especial</label>
+                <label for="f-dieta">Spezielle Ernährungsform</label>
                 <select id="f-dieta" name="dieta">
-                  <option value="" disabled selected>Selecciona</option>
-                  <option value="ninguna">Ninguna (todo)</option>
-                  <option value="vegetariana">Vegetariana</option>
-                  <option value="vegana">Vegana</option>
+                  <option value="" disabled selected>Auswählen</option>
+                  <option value="keine">Keine (alles)</option>
+                  <option value="vegetarisch">Vegetarisch</option>
+                  <option value="vegan">Vegan</option>
                   <option value="halal">Halal</option>
-                  <option value="kosher">Kosher</option>
-                  <option value="otra">Otra</option>
+                  <option value="koscher">Koscher</option>
+                  <option value="andere">Andere</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="f-no-come">Alimentos que no comes</label>
-                <input type="text" id="f-no-come" name="no_come" placeholder="Ej: hígado, cebolla...">
+                <label for="f-no-come">Lebensmittel, die du nicht isst</label>
+                <input type="text" id="f-no-come" name="no_come" placeholder="z.B. Leber, Zwiebeln...">
               </div>
             </div>
           </fieldset>
 
-          <!-- BLOQUE 4: Entrenamiento -->
+          <!-- BLOCK 4: Training -->
           <fieldset class="form-block">
             <legend class="form-block-title">
               <span class="form-block-num" aria-hidden="true">04</span>
-              Entrenamiento actual
+              Aktuelles Training
             </legend>
             <div class="form-row form-row--2">
               <div class="form-group">
-                <label for="f-entrena">¿Entrenas actualmente?</label>
+                <label for="f-entrena">Trainierst du zurzeit?</label>
                 <select id="f-entrena" name="entrena_ahora">
-                  <option value="" disabled selected>Selecciona</option>
-                  <option value="si_habitual">Sí, de forma habitual</option>
-                  <option value="si_esporadico">Sí, pero de forma esporádica</option>
-                  <option value="no">No entreno ahora mismo</option>
+                  <option value="" disabled selected>Auswählen</option>
+                  <option value="ja_regelmässig">Ja, regelmäßig</option>
+                  <option value="ja_gelegentlich">Ja, aber gelegentlich</option>
+                  <option value="nein">Nein, gerade nicht</option>
                 </select>
               </div>
               <div class="form-group">
-                <label>Dónde entrenas</label>
-                <div class="radio-grid radio-grid--inline" role="radiogroup" aria-label="Lugar de entrenamiento">
+                <label>Wo trainierst du?</label>
+                <div class="radio-grid radio-grid--inline" role="radiogroup" aria-label="Trainingsort">
                   <label class="radio-card">
-                    <input type="radio" name="lugar" value="gimnasio">
-                    <span class="radio-label">Gimnasio</span>
+                    <input type="radio" name="lugar" value="fitnessstudio">
+                    <span class="radio-label">Fitnessstudio</span>
                   </label>
                   <label class="radio-card">
-                    <input type="radio" name="lugar" value="casa">
-                    <span class="radio-label">Casa</span>
+                    <input type="radio" name="lugar" value="zuhause">
+                    <span class="radio-label">Zuhause</span>
                   </label>
                   <label class="radio-card">
-                    <input type="radio" name="lugar" value="exterior">
-                    <span class="radio-label">Exterior</span>
+                    <input type="radio" name="lugar" value="draussen">
+                    <span class="radio-label">Draußen</span>
                   </label>
                   <label class="radio-card">
-                    <input type="radio" name="lugar" value="mixto">
-                    <span class="radio-label">Mixto</span>
+                    <input type="radio" name="lugar" value="gemischt">
+                    <span class="radio-label">Gemischt</span>
                   </label>
                 </div>
               </div>
             </div>
             <div class="form-row form-row--3">
               <div class="form-group">
-                <label for="f-nivel">Nivel</label>
+                <label for="f-nivel">Level</label>
                 <select id="f-nivel" name="nivel">
-                  <option value="" disabled selected>Selecciona</option>
-                  <option value="principiante">Principiante</option>
-                  <option value="intermedio">Intermedio</option>
-                  <option value="avanzado">Avanzado</option>
+                  <option value="" disabled selected>Auswählen</option>
+                  <option value="anfaenger">Anfänger</option>
+                  <option value="fortgeschritten">Fortgeschritten</option>
+                  <option value="experte">Experte</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="f-dias">Días/semana disponibles</label>
+                <label for="f-dias">Verfügbare Tage/Woche</label>
                 <select id="f-dias" name="dias_semana">
-                  <option value="" disabled selected>Selecciona</option>
-                  <option value="2">2 días</option>
-                  <option value="3">3 días</option>
-                  <option value="4">4 días</option>
-                  <option value="5">5 días</option>
-                  <option value="6+">6 o más</option>
+                  <option value="" disabled selected>Auswählen</option>
+                  <option value="2">2 Tage</option>
+                  <option value="3">3 Tage</option>
+                  <option value="4">4 Tage</option>
+                  <option value="5">5 Tage</option>
+                  <option value="6+">6 oder mehr</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="f-tiempo">Tiempo por sesión</label>
+                <label for="f-tiempo">Zeit pro Einheit</label>
                 <select id="f-tiempo" name="tiempo_sesion">
-                  <option value="" disabled selected>Selecciona</option>
-                  <option value="30">~30 min</option>
-                  <option value="45">~45 min</option>
-                  <option value="60">~60 min</option>
-                  <option value="90">~90 min</option>
+                  <option value="" disabled selected>Auswählen</option>
+                  <option value="30">~30 Min</option>
+                  <option value="45">~45 Min</option>
+                  <option value="60">~60 Min</option>
+                  <option value="90">~90 Min</option>
                 </select>
               </div>
             </div>
           </fieldset>
 
-          <!-- BLOQUE 5: Salud -->
+          <!-- BLOCK 5: Gesundheit -->
           <fieldset class="form-block">
             <legend class="form-block-title">
               <span class="form-block-num" aria-hidden="true">05</span>
-              Salud
+              Gesundheit
             </legend>
             <div class="form-row form-row--2">
               <div class="form-group">
-                <label for="f-lesiones">Lesiones actuales o pasadas</label>
-                <textarea id="f-lesiones" name="lesiones" rows="2" placeholder="Ej: rotura de menisco, tendinitis..."></textarea>
+                <label for="f-lesiones">Aktuelle oder frühere Verletzungen</label>
+                <textarea id="f-lesiones" name="lesiones" rows="2" placeholder="z.B. Meniskusriss, Tendinitis..."></textarea>
               </div>
               <div class="form-group">
-                <label for="f-dolor">Zonas de dolor o molestia</label>
-                <textarea id="f-dolor" name="dolor" rows="2" placeholder="Ej: rodilla derecha, zona lumbar..."></textarea>
+                <label for="f-dolor">Schmerzende oder problematische Körperstellen</label>
+                <textarea id="f-dolor" name="dolor" rows="2" placeholder="z.B. rechtes Knie, Lendenwirbel..."></textarea>
               </div>
             </div>
             <div class="form-row form-row--2">
               <div class="form-group">
-                <label for="f-enfermedades">Enfermedades diagnosticadas</label>
-                <input type="text" id="f-enfermedades" name="enfermedades" placeholder="Ej: hipotiroidismo, diabetes...">
+                <label for="f-enfermedades">Diagnostizierte Erkrankungen</label>
+                <input type="text" id="f-enfermedades" name="enfermedades" placeholder="z.B. Hypothyreose, Diabetes...">
               </div>
               <div class="form-group">
-                <label for="f-medicacion">Medicación actual</label>
-                <input type="text" id="f-medicacion" name="medicacion" placeholder="Ej: Eutirox, metformina...">
+                <label for="f-medicacion">Aktuelle Medikamente</label>
+                <input type="text" id="f-medicacion" name="medicacion" placeholder="z.B. L-Thyroxin, Metformin...">
               </div>
             </div>
             <div class="form-group">
-              <label for="f-salud-extra">Otra información relevante sobre tu salud</label>
-              <textarea id="f-salud-extra" name="salud_extra" rows="2" placeholder="Cualquier cosa que creas importante que sepamos..."></textarea>
+              <label for="f-salud-extra">Weitere relevante Gesundheitsinformationen</label>
+              <textarea id="f-salud-extra" name="salud_extra" rows="2" placeholder="Alles, was wir deiner Meinung nach wissen sollten..."></textarea>
             </div>
           </fieldset>
 
-          <!-- BLOQUE 6: Motivación -->
+          <!-- BLOCK 6: Motivation -->
           <fieldset class="form-block">
             <legend class="form-block-title">
               <span class="form-block-num" aria-hidden="true">06</span>
-              Motivación
+              Motivation
             </legend>
             <div class="form-group">
-              <label for="f-por-que">¿Por qué quieres entrar en este reto?</label>
-              <textarea id="f-por-que" name="por_que" rows="3" placeholder="Cuéntanos qué te ha traído hasta aquí..."></textarea>
+              <label for="f-por-que">Warum möchtest du an dieser Challenge teilnehmen?</label>
+              <textarea id="f-por-que" name="por_que" rows="3" placeholder="Erzähl uns, was dich hierher gebracht hat..."></textarea>
             </div>
             <div class="form-group">
-              <label for="f-freno">¿Qué te ha frenado antes?</label>
-              <textarea id="f-freno" name="freno" rows="3" placeholder="¿Falta de tiempo, constancia, información...?"></textarea>
+              <label for="f-freno">Was hat dich bisher aufgehalten?</label>
+              <textarea id="f-freno" name="freno" rows="3" placeholder="Zeitmangel, Ausdauer, Informationen...?"></textarea>
             </div>
             <div class="form-group">
-              <label for="f-compromiso">¿Cuánto te comprometes del 1 al 10?</label>
+              <label for="f-compromiso">Wie sehr bist du committed? (1 bis 10)</label>
               <div class="compromiso-slider">
                 <input type="range" id="f-compromiso" name="compromiso" min="1" max="10" value="8"
                        oninput="document.getElementById('compromisoVal').textContent=this.value">
@@ -1229,24 +1153,25 @@
             </div>
           </fieldset>
 
-          <!-- AVISO LEGAL + BOTÓN -->
+          <!-- RECHTLICHER HINWEIS + BUTTON -->
           <div class="form-footer">
             <label class="form-checkbox">
               <input type="checkbox" name="aviso_medico" id="f-aviso">
               <span class="checkbox-custom" aria-hidden="true"></span>
               <span class="checkbox-label">
-                He leído y entiendo que Transform·Lab no sustituye asesoramiento médico profesional.
-                Si tengo alguna condición de salud, consultaré con mi médico antes de comenzar.
+                Ich habe gelesen und verstehe, dass Transform·Lab keine professionelle
+                ärztliche Beratung ersetzt. Wenn ich einen Gesundheitszustand habe,
+                werde ich vor Beginn meinen Arzt konsultieren.
               </span>
             </label>
 
             <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="btn-primary btn-form-submit">
-              Solicitar mi plaza — 249 €
+              Meinen Platz sichern — 249 €
             </a>
 
             <p class="form-disclaimer">
-              Tus datos se usarán únicamente para preparar tu plan y valorar tu solicitud.
-              No los compartiremos con terceros.
+              Deine Daten werden nur zur Vorbereitung deines Plans und zur Bewertung
+              deiner Anfrage verwendet. Wir geben sie nicht an Dritte weiter.
             </p>
           </div>
 
@@ -1254,33 +1179,31 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════
-         CTA FINAL
-    ════════════════════════════ -->
+    <!-- FINALER CTA -->
     <section id="final-cta" aria-labelledby="cta-heading">
       <div class="container">
         <div class="final-cta-inner">
           <span class="label label-line reveal"
-                style="display:inline-flex;justify-content:center">Empieza hoy</span>
+                style="display:inline-flex;justify-content:center">Starte heute</span>
           <h2 id="cta-heading" class="reveal">
-            El momento de decidir es ahora.
+            Der Moment der Entscheidung ist jetzt.
           </h2>
           <p class="reveal reveal-delay-1">
-            Cada semana que pasa sin estructura es una semana más repitiendo
-            el mismo ciclo. Entra en el reto, cumple tus objetivos y
-            recupera tu inversión. Sin excusas. Con resultados.
+            Jede Woche ohne Struktur ist eine weitere Woche im selben Kreislauf.
+            Tritt der Challenge bei, erreiche deine Ziele und bekomme
+            deine Investition zurück. Keine Ausreden. Echte Ergebnisse.
           </p>
           <div class="final-cta-buttons reveal reveal-delay-2">
             <a href="https://buy.stripe.com/test_aFa4gzf1p9Go6GRakQ8IU00" target="_blank" rel="noopener" class="btn-primary" style="font-size:16px;padding:18px 44px">
-              Solicitar mi plaza
+              Meinen Platz sichern
             </a>
             <a href="#how" class="btn-secondary" style="font-size:15px;padding:16px 32px">
-              Ver cómo funciona
+              So funktioniert es
             </a>
           </div>
           <p class="final-cta-sub reveal reveal-delay-3">
-            Plazas limitadas para esta convocatoria de lanzamiento.
-            Las solicitudes se confirman por orden de llegada.
+            Begrenzte Plätze für diese Launch-Runde.
+            Anfragen werden in der Reihenfolge des Eingangs bestätigt.
           </p>
         </div>
       </div>
@@ -1288,23 +1211,16 @@
 
   </main>
 
-  <!-- ════════════════════════════
-       FOOTER
-  ════════════════════════════ -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <!-- TODO: cambia el nombre de la marca -->
       <a href="#" class="logo" style="font-size:12px;letter-spacing:.15em">
         Transform<span>·</span>Lab
       </a>
-      <!-- TODO: actualiza el año y la razón social -->
-      <p>© 2026 Transform·Lab · Programa de transformación corporal con fianza reembolsable</p>
-      <!-- TODO: enlaza a tus páginas de privacidad y aviso legal reales -->
+      <p>© 2026 Transform·Lab · Körpertransformationsprogramm mit rückerstattbarer Kaution</p>
       <p style="font-size:11px;max-width:500px;line-height:1.6">
-        Los resultados pueden variar. El programa no sustituye asesoramiento
-        médico profesional. Consulta con tu médico antes de comenzar cualquier
-        plan de alimentación o entrenamiento.
-        <!-- TODO: añade enlace a Política de privacidad y Aviso legal -->
+        Die Ergebnisse können variieren. Das Programm ersetzt keine professionelle
+        ärztliche Beratung. Konsultiere deinen Arzt, bevor du mit einem
+        Ernährungs- oder Trainingsplan beginnst.
       </p>
     </div>
   </footer>
