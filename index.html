@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=Hanken+Grotesk:wght@300;400;500&display=swap"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=23">
+  <link rel="stylesheet" href="css/styles.css?v=24">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -49,8 +49,8 @@
     <!-- HERO -->
     <section id="hero" aria-labelledby="hero-heading">
       <div class="hero-wipe" aria-hidden="true">
-        <img src="assets/escultura-transformacion.png" alt="" class="hero-wipe-img hero-wipe-img--man">
-        <img src="assets/escultura-transformacion-mujer.png" alt="" class="hero-wipe-img hero-wipe-img--woman">
+        <img src="assets/escultura-transformacion.webp" alt="" class="hero-wipe-img hero-wipe-img--man">
+        <img src="assets/escultura-transformacion-mujer.webp" alt="" class="hero-wipe-img hero-wipe-img--woman">
         <div class="hero-wipe-line"></div>
       </div>
       <div class="hero-bg"   aria-hidden="true"></div>
@@ -85,19 +85,15 @@
             </div>
 
             <div class="hero-price-cards" aria-label="Preisübersicht">
-              <div class="hpc-card">
+              <div class="hpc-card hpc-card--main">
+                <div class="hpc-label-top">Programm ab</div>
                 <div class="hpc-value">60<span>€</span></div>
                 <div class="hpc-label">Einführungspreis</div>
               </div>
-              <div class="hpc-sep" aria-hidden="true">+</div>
               <div class="hpc-card hpc-card--fianza">
+                <div class="hpc-label-top">+ Kaution</div>
                 <div class="hpc-value">199<span>€</span></div>
-                <div class="hpc-label">Rückerstattbare Kaution</div>
-              </div>
-              <div class="hpc-sep" aria-hidden="true">=</div>
-              <div class="hpc-card hpc-card--total">
-                <div class="hpc-value">259<span>€</span></div>
-                <div class="hpc-label">Gesamtbetrag</div>
+                <div class="hpc-label">Bis zu 100% rückerstattbar</div>
               </div>
             </div>
 
@@ -681,10 +677,10 @@
           <div class="avatar-card">
             <div class="avatar-card-inner">
               <div class="avatar-card-front">
-                <img src="assets/atleta-hombre.png" alt="" class="emotional-img" loading="lazy">
+                <img src="assets/atleta-hombre.webp" alt="" class="emotional-img" loading="lazy">
               </div>
               <div class="avatar-card-back">
-                <img src="assets/atleta-mujer.png" alt="" class="emotional-img" loading="lazy">
+                <img src="assets/atleta-mujer.webp" alt="" class="emotional-img" loading="lazy">
               </div>
             </div>
           </div>
@@ -719,8 +715,8 @@
 
         <div class="elige-center">
           <div class="elige-img-wrap" aria-hidden="true">
-            <img src="assets/escultura-transformacion.png" alt="" class="elige-img elige-img--man">
-            <img src="assets/escultura-transformacion-mujer.png" alt="" class="elige-img elige-img--woman">
+            <img src="assets/escultura-transformacion.webp" alt="" class="elige-img elige-img--man">
+            <img src="assets/escultura-transformacion-mujer.webp" alt="" class="elige-img elige-img--woman">
             <div class="wipe-line"></div>
           </div>
           <p class="elige-sub" id="elige-heading">
@@ -1022,6 +1018,66 @@
             </div>
           </div>
 
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-10">
+              Ich will kein Geld riskieren. Warum sollte ich das machen?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-10" role="region">
+              <div class="faq-answer-inner">
+                Du riskierst nichts, was du nicht bereit bist zu investieren.
+                Die Kaution ist dein eigenes Geld — und du bekommst es zurück,
+                wenn du deine Ziele erreichst. Der einzige Weg, sie zu verlieren,
+                ist, nicht zu erscheinen. Wer wirklich bereit ist, verliert nichts.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-11">
+              Wann und wie bekomme ich mein Geld zurück?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-11" role="region">
+              <div class="faq-answer-inner">
+                Nach jeder erfüllten Woche werden 25 € (Woche 8: 24 €) auf dasselbe
+                Zahlungsmittel zurückgebucht, mit dem du bezahlt hast. Die Auszahlung
+                erfolgt innerhalb von 14 Werktagen nach Programmende oder auf Anfrage
+                nach jeder abgeschlossenen Woche.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-12">
+              Was passiert, wenn ich eine Woche verreise oder krank bin?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-12" role="region">
+              <div class="faq-answer-inner">
+                Bei einer dokumentierten Erkrankung oder höherer Gewalt wird
+                die betroffene Woche individuell bewertet — wir sind fair, nicht
+                starr. Eine Reise allein gilt nicht als Ausnahme: das Programm ist
+                so gestaltet, dass es auch unterwegs umsetzbar ist.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-13">
+              259 € ist viel. Lohnt sich das wirklich?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-13" role="region">
+              <div class="faq-answer-inner">
+                Das Programm kostet 60 €. Die 199 € sind deine Kaution —
+                nicht der Preis. Wenn du deine Ziele erreichst, zahlst du am Ende
+                nur 60 €. Vergleiche das mit einem Monat Fitnessstudio ohne Plan,
+                ohne Begleitung und ohne Ergebnis.
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1050,7 +1106,8 @@
       </div>
     </section>
 
-    <!-- ÜBER MICH -->
+    <!-- ÜBER MICH — oculto hasta tener foto y texto real -->
+    <!-- <section id="ueber-mich"
     <section id="ueber-mich" aria-labelledby="ueber-heading">
       <div class="container">
         <div class="ueber-grid">
@@ -1100,6 +1157,8 @@
         </div>
       </div>
     </section>
+
+    </section> -->
 
     <!-- VERTRAUEN VOR DEM FORMULAR -->
     <section id="trust" aria-labelledby="trust-heading">
@@ -1158,89 +1217,35 @@
         <span class="label label-line reveal">Platz anfragen</span>
         <h2 id="form-heading" class="reveal">Erzähl uns etwas über dich.</h2>
         <p class="form-intro reveal reveal-delay-1">
-          Fülle das Formular so ehrlich wie möglich aus. Wir verwenden diese Daten,
-          um zu beurteilen, ob das Programm für dich geeignet ist, und um deinen
-          persönlichen Plan vorzubereiten. Es verpflichtet dich zu nichts, bis wir
-          deinen Platz bestätigen.
+          Drei Angaben reichen — kein langer Fragebogen. Wir melden uns innerhalb von 24 Stunden.
+          Die Details klären wir persönlich vor dem Start.
         </p>
-
-        <div class="form-progress reveal reveal-delay-1" aria-hidden="true">
-          <div class="fp-step fp-active"><span class="fp-num">1</span><span class="fp-label">Grunddaten</span></div>
-          <div class="fp-line"></div>
-          <div class="fp-step"><span class="fp-num">2</span><span class="fp-label">Ziel</span></div>
-          <div class="fp-line"></div>
-          <div class="fp-step"><span class="fp-num">3</span><span class="fp-label">Ernährung</span></div>
-          <div class="fp-line"></div>
-          <div class="fp-step"><span class="fp-num">4</span><span class="fp-label">Training</span></div>
-          <div class="fp-line"></div>
-          <div class="fp-step"><span class="fp-num">5</span><span class="fp-label">Gesundheit</span></div>
-          <div class="fp-line"></div>
-          <div class="fp-step"><span class="fp-num">6</span><span class="fp-label">Motivation</span></div>
-        </div>
 
         <form class="solicitud-form reveal reveal-delay-2" id="solicitudForm" action="https://formspree.io/f/mzdqyror" method="POST">
           <input type="hidden" name="_subject" value="Neue Transform·Lab Anfrage">
           <input type="hidden" name="_next" value="https://www.transform-lab.de/danke.html">
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-          <!-- BLOCK 1: Grunddaten -->
           <fieldset class="form-block">
-            <legend class="form-block-title">
-              <span class="form-block-num" aria-hidden="true">01</span>
-              Grunddaten
+            <legend class="form-block-title" style="border:none;padding:0;margin-bottom:24px;font-size:1rem">
+              Deine Kontaktdaten
             </legend>
             <div class="form-row form-row--2">
               <div class="form-group">
-                <label for="f-nombre">Vollständiger Name</label>
-                <input type="text" id="f-nombre" name="nombre" placeholder="Dein Name" autocomplete="name">
+                <label for="f-nombre">Name <span class="form-required">*</span></label>
+                <input type="text" id="f-nombre" name="nombre" placeholder="Dein Name" autocomplete="name" required>
               </div>
               <div class="form-group">
-                <label for="f-email">E-Mail</label>
-                <input type="email" id="f-email" name="_replyto" placeholder="deine@email.de" autocomplete="email">
+                <label for="f-email">E-Mail <span class="form-required">*</span></label>
+                <input type="email" id="f-email" name="_replyto" placeholder="deine@email.de" autocomplete="email" required>
               </div>
             </div>
-            <div class="form-row form-row--2">
-              <div class="form-group">
-                <label for="f-edad">Alter</label>
-                <input type="number" id="f-edad" name="edad" placeholder="z.B. 32" min="18" max="70">
-              </div>
-              <div class="form-group">
-                <label for="f-sexo">Geschlecht</label>
-                <select id="f-sexo" name="sexo">
-                  <option value="" disabled selected>Auswählen</option>
-                  <option value="mann">Mann</option>
-                  <option value="frau">Frau</option>
-                  <option value="andere">Andere / Keine Angabe</option>
-                </select>
-              </div>
-            </div>
-          </fieldset>
 
-          <!-- BLOCK 2: Körperliches Ziel -->
-          <fieldset class="form-block">
-            <legend class="form-block-title">
-              <span class="form-block-num" aria-hidden="true">02</span>
-              Körperliches Ziel
-            </legend>
-            <div class="form-row form-row--3">
-              <div class="form-group">
-                <label for="f-peso-actual">Aktuelles Gewicht (kg)</label>
-                <input type="number" id="f-peso-actual" name="peso_actual" placeholder="z.B. 90">
-              </div>
-              <div class="form-group">
-                <label for="f-altura">Größe (cm)</label>
-                <input type="number" id="f-altura" name="altura" placeholder="z.B. 175">
-              </div>
-              <div class="form-group">
-                <label for="f-peso-objetivo">Zielgewicht (kg)</label>
-                <input type="number" id="f-peso-objetivo" name="peso_objetivo" placeholder="z.B. 82">
-              </div>
-            </div>
             <div class="form-group">
-              <label>Hauptziel</label>
+              <label>Was ist dein Hauptziel? <span class="form-required">*</span></label>
               <div class="radio-grid" role="radiogroup" aria-label="Hauptziel">
                 <label class="radio-card">
-                  <input type="radio" name="objetivo" value="fett_verlieren">
+                  <input type="radio" name="objetivo" value="fett_verlieren" required>
                   <span class="radio-label">Fett verlieren</span>
                 </label>
                 <label class="radio-card">
@@ -1257,172 +1262,11 @@
                 </label>
               </div>
             </div>
-          </fieldset>
 
-          <!-- BLOCK 3: Ernährung -->
-          <fieldset class="form-block">
-            <legend class="form-block-title">
-              <span class="form-block-num" aria-hidden="true">03</span>
-              Ernährung
-            </legend>
-            <div class="form-row form-row--2">
-              <div class="form-group">
-                <label for="f-alergias">Lebensmittelallergien</label>
-                <input type="text" id="f-alergias" name="alergias" placeholder="z.B. Nüsse, Meeresfrüchte...">
-              </div>
-              <div class="form-group">
-                <label for="f-intolerancias">Unverträglichkeiten</label>
-                <input type="text" id="f-intolerancias" name="intolerancias" placeholder="z.B. Laktose, Gluten...">
-              </div>
-            </div>
-            <div class="form-row form-row--2">
-              <div class="form-group">
-                <label for="f-dieta">Spezielle Ernährungsform</label>
-                <select id="f-dieta" name="dieta">
-                  <option value="" disabled selected>Auswählen</option>
-                  <option value="keine">Keine (alles)</option>
-                  <option value="vegetarisch">Vegetarisch</option>
-                  <option value="vegan">Vegan</option>
-                  <option value="halal">Halal</option>
-                  <option value="koscher">Koscher</option>
-                  <option value="andere">Andere</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="f-no-come">Lebensmittel, die du nicht isst</label>
-                <input type="text" id="f-no-come" name="no_come" placeholder="z.B. Leber, Zwiebeln...">
-              </div>
-            </div>
-          </fieldset>
-
-          <!-- BLOCK 4: Training -->
-          <fieldset class="form-block">
-            <legend class="form-block-title">
-              <span class="form-block-num" aria-hidden="true">04</span>
-              Aktuelles Training
-            </legend>
-            <div class="form-row form-row--2">
-              <div class="form-group">
-                <label for="f-entrena">Trainierst du zurzeit?</label>
-                <select id="f-entrena" name="entrena_ahora">
-                  <option value="" disabled selected>Auswählen</option>
-                  <option value="ja_regelmässig">Ja, regelmäßig</option>
-                  <option value="ja_gelegentlich">Ja, aber gelegentlich</option>
-                  <option value="nein">Nein, gerade nicht</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Wo trainierst du?</label>
-                <div class="radio-grid radio-grid--inline" role="radiogroup" aria-label="Trainingsort">
-                  <label class="radio-card">
-                    <input type="radio" name="lugar" value="fitnessstudio">
-                    <span class="radio-label">Fitnessstudio</span>
-                  </label>
-                  <label class="radio-card">
-                    <input type="radio" name="lugar" value="zuhause">
-                    <span class="radio-label">Zuhause</span>
-                  </label>
-                  <label class="radio-card">
-                    <input type="radio" name="lugar" value="draussen">
-                    <span class="radio-label">Draußen</span>
-                  </label>
-                  <label class="radio-card">
-                    <input type="radio" name="lugar" value="gemischt">
-                    <span class="radio-label">Gemischt</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="form-row form-row--3">
-              <div class="form-group">
-                <label for="f-nivel">Level</label>
-                <select id="f-nivel" name="nivel">
-                  <option value="" disabled selected>Auswählen</option>
-                  <option value="anfaenger">Einsteiger</option>
-                  <option value="fortgeschritten">Fortgeschritten</option>
-                  <option value="experte">Sehr erfahren</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="f-dias">Verfügbare Tage/Woche</label>
-                <select id="f-dias" name="dias_semana">
-                  <option value="" disabled selected>Auswählen</option>
-                  <option value="2">2 Tage</option>
-                  <option value="3">3 Tage</option>
-                  <option value="4">4 Tage</option>
-                  <option value="5">5 Tage</option>
-                  <option value="6+">6 oder mehr</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="f-tiempo">Zeit pro Einheit</label>
-                <select id="f-tiempo" name="tiempo_sesion">
-                  <option value="" disabled selected>Auswählen</option>
-                  <option value="30">~30 Min</option>
-                  <option value="45">~45 Min</option>
-                  <option value="60">~60 Min</option>
-                  <option value="90">~90 Min</option>
-                </select>
-              </div>
-            </div>
-          </fieldset>
-
-          <!-- BLOCK 5: Gesundheit -->
-          <fieldset class="form-block">
-            <legend class="form-block-title">
-              <span class="form-block-num" aria-hidden="true">05</span>
-              Gesundheit
-            </legend>
-            <div class="form-row form-row--2">
-              <div class="form-group">
-                <label for="f-lesiones">Aktuelle oder frühere Verletzungen</label>
-                <textarea id="f-lesiones" name="lesiones" rows="2" placeholder="z.B. Meniskusriss, Tendinitis..."></textarea>
-              </div>
-              <div class="form-group">
-                <label for="f-dolor">Schmerzende oder problematische Körperstellen</label>
-                <textarea id="f-dolor" name="dolor" rows="2" placeholder="z.B. rechtes Knie, Lendenwirbel..."></textarea>
-              </div>
-            </div>
-            <div class="form-row form-row--2">
-              <div class="form-group">
-                <label for="f-enfermedades">Diagnostizierte Erkrankungen</label>
-                <input type="text" id="f-enfermedades" name="enfermedades" placeholder="z.B. Hypothyreose, Diabetes...">
-              </div>
-              <div class="form-group">
-                <label for="f-medicacion">Aktuelle Medikamente</label>
-                <input type="text" id="f-medicacion" name="medicacion" placeholder="z.B. L-Thyroxin, Metformin...">
-              </div>
-            </div>
             <div class="form-group">
-              <label for="f-salud-extra">Weitere relevante Gesundheitsinformationen</label>
-              <textarea id="f-salud-extra" name="salud_extra" rows="2" placeholder="Alles, was wir deiner Meinung nach wissen sollten..."></textarea>
-            </div>
-          </fieldset>
-
-          <!-- BLOCK 6: Motivation -->
-          <fieldset class="form-block">
-            <legend class="form-block-title">
-              <span class="form-block-num" aria-hidden="true">06</span>
-              Motivation
-            </legend>
-            <div class="form-group">
-              <label for="f-por-que">Warum möchtest du an dieser Challenge teilnehmen?</label>
-              <textarea id="f-por-que" name="por_que" rows="3" placeholder="Erzähl uns, was dich hierher gebracht hat..."></textarea>
-            </div>
-            <div class="form-group">
-              <label for="f-freno">Was hat dich bisher aufgehalten?</label>
-              <textarea id="f-freno" name="freno" rows="3" placeholder="Zeitmangel, Ausdauer, Informationen...?"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="f-compromiso">Wie hoch ist dein Commitment? (1 bis 10)</label>
-              <div class="compromiso-slider">
-                <input type="range" id="f-compromiso" name="compromiso" min="1" max="10" value="8"
-                       oninput="document.getElementById('compromisoVal').textContent=this.value">
-                <div class="compromiso-display">
-                  <span id="compromisoVal">8</span>
-                  <span style="font-size:13px;color:var(--text-muted)">/10</span>
-                </div>
-              </div>
+              <label for="f-mensaje">Kurze Nachricht <span style="color:var(--text-dim);font-weight:300">(optional)</span></label>
+              <textarea id="f-mensaje" name="mensaje" rows="3"
+                placeholder="Was hat dich bisher aufgehalten? Was erwartest du vom Programm?"></textarea>
             </div>
           </fieldset>
 
@@ -1464,7 +1308,7 @@
             </div>
 
             <button type="submit" class="btn-primary btn-form-submit">
-              Meinen Platz anfragen — kostenlos & unverbindlich
+              Platz anfragen
             </button>
 
             <p class="form-disclaimer">

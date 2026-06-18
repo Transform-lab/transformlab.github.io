@@ -1637,6 +1637,19 @@ section { padding: 120px 0; }
   color: var(--text-muted);
 }
 
+/* ─── HERO PRICE CARDS (versión simplificada: 2 cards) ─── */
+.hpc-label-top {
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+.hpc-card--main { border-color: var(--green); }
+
+/* ─── FORM REQUIRED MARKER ─── */
+.form-required { color: var(--green-light); font-weight: 400; }
+
 /* ─── FIELD VALIDATION ERROR ─── */
 .field-error {
   border-color: #e05555 !important;
