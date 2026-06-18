@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=Hanken+Grotesk:wght@300;400;500&display=swap"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=27">
+  <link rel="stylesheet" href="css/styles.css?v=28">
 
   <link rel="preload" as="image" href="assets/escultura-transformacion.webp" type="image/webp">
   <link rel="preload" as="image" href="assets/escultura-transformacion-mujer.webp" type="image/webp">
@@ -1280,8 +1280,8 @@
       <div class="container">
         <span class="label label-line reveal">Platz anfragen</span>
         <h2 id="form-heading" class="reveal">Erzähl uns etwas über dich.</h2>
-        <p class="form-intro reveal reveal-delay-1">
-          Drei Angaben reichen — kein langer Fragebogen. Wir melden uns innerhalb von 24 Stunden.
+        <p class="form-intro reveal reveal-delay-1" id="formIntro">
+          Kein langer Fragebogen. Wir melden uns innerhalb von 24 Stunden.
           Die Details klären wir persönlich vor dem Start.
         </p>
 
@@ -1352,12 +1352,138 @@
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" id="f-mensaje-wrap">
               <label for="f-mensaje">Kurze Nachricht <span style="color:var(--text-dim);font-weight:300">(optional)</span></label>
               <textarea id="f-mensaje" name="mensaje" rows="3"
                 placeholder="Was hat dich bisher aufgehalten? Was erwartest du vom Programm?"></textarea>
             </div>
           </fieldset>
+
+          <!-- EXTRA FELDER: nur für "Nur Plan" (JS zeigt/versteckt) -->
+          <div id="nurplan-fields" hidden>
+            <div class="nurplan-divider">Dein persönliches Profil</div>
+            <div class="form-block">
+
+              <div class="form-row form-row--2">
+                <div class="form-group">
+                  <label for="f-alter">Alter <span class="form-required">*</span></label>
+                  <input type="number" id="f-alter" name="alter" placeholder="z.B. 28" min="18" max="70">
+                </div>
+                <div class="form-group">
+                  <label for="f-groesse">Körpergröße (cm) <span class="form-required">*</span></label>
+                  <input type="number" id="f-groesse" name="groesse" placeholder="z.B. 175" min="140" max="220">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Geschlecht <span class="form-required">*</span></label>
+                <div class="radio-grid radio-grid--inline" role="radiogroup">
+                  <label class="radio-card">
+                    <input type="radio" name="geschlecht" value="maennlich">
+                    <span class="radio-label">Männlich</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="geschlecht" value="weiblich">
+                    <span class="radio-label">Weiblich</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="geschlecht" value="divers">
+                    <span class="radio-label">Divers</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-row form-row--2">
+                <div class="form-group">
+                  <label for="f-gewicht">Aktuelles Gewicht (kg) <span class="form-required">*</span></label>
+                  <input type="number" id="f-gewicht" name="gewicht_aktuell" placeholder="z.B. 85" min="40" max="200">
+                </div>
+                <div class="form-group">
+                  <label for="f-zielgewicht">Zielgewicht (kg) <span class="form-required">*</span></label>
+                  <input type="number" id="f-zielgewicht" name="gewicht_ziel" placeholder="z.B. 78" min="40" max="200">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="f-aktivitaet">Aktivitätslevel <span class="form-required">*</span></label>
+                <select id="f-aktivitaet" name="aktivitaet">
+                  <option value="" disabled selected>Bitte auswählen</option>
+                  <option value="wenig_aktiv">Wenig aktiv — Bürojob, kaum Sport</option>
+                  <option value="leicht_aktiv">Leicht aktiv — 1–2× Sport pro Woche</option>
+                  <option value="maessig_aktiv">Mäßig aktiv — 3–4× Sport pro Woche</option>
+                  <option value="sehr_aktiv">Sehr aktiv — 5+× oder körperliche Arbeit</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Ernährungsweise <span class="form-required">*</span></label>
+                <div class="radio-grid radio-grid--inline" role="radiogroup">
+                  <label class="radio-card">
+                    <input type="radio" name="ernaehrung" value="alles">
+                    <span class="radio-label">Alles</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="ernaehrung" value="vegetarisch">
+                    <span class="radio-label">Vegetarisch</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="ernaehrung" value="vegan">
+                    <span class="radio-label">Vegan</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="ernaehrung" value="sonstiges">
+                    <span class="radio-label">Sonstiges</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Trainingsort <span class="form-required">*</span></label>
+                <div class="radio-grid radio-grid--inline" role="radiogroup">
+                  <label class="radio-card">
+                    <input type="radio" name="trainingsort" value="fitnessstudio">
+                    <span class="radio-label">Fitnessstudio</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="trainingsort" value="zuhause">
+                    <span class="radio-label">Zuhause</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="trainingsort" value="beides">
+                    <span class="radio-label">Beides</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="f-trainingstage">Trainingstage pro Woche <span class="form-required">*</span></label>
+                <select id="f-trainingstage" name="trainingstage">
+                  <option value="" disabled selected>Bitte auswählen</option>
+                  <option value="2">2 Tage</option>
+                  <option value="3">3 Tage</option>
+                  <option value="4">4 Tage</option>
+                  <option value="5">5 Tage</option>
+                  <option value="6">6 Tage</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="f-allergien">Allergien / Unverträglichkeiten <span style="color:var(--text-dim);font-weight:300">(optional)</span></label>
+                <textarea id="f-allergien" name="allergien" rows="2" placeholder="z.B. Laktose, Gluten, Nüsse..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="f-verletzungen">Verletzungen / körperliche Einschränkungen <span style="color:var(--text-dim);font-weight:300">(optional)</span></label>
+                <textarea id="f-verletzungen" name="verletzungen" rows="2" placeholder="z.B. Knieschmerzen, Rückenprobleme..."></textarea>
+              </div>
+
+              <div class="form-group" style="margin-bottom:0">
+                <label for="f-nachricht-np">Zusätzliche Nachricht <span style="color:var(--text-dim);font-weight:300">(optional)</span></label>
+                <textarea id="f-nachricht-np" name="nachricht_plan" rows="3" placeholder="Weitere Infos oder Fragen..."></textarea>
+              </div>
+
+            </div>
+          </div>
 
           <!-- RECHTLICHER HINWEIS + BUTTON -->
           <div class="form-footer">
@@ -1393,10 +1519,10 @@
                 <span id="fpsLabel">Wähle oben einen Plan aus</span>
                 <strong id="fpsTotal"></strong>
               </div>
-              <p class="fps-note">Diese Anfrage verpflichtet dich noch nicht zur Zahlung. Wir prüfen deine Anfrage und bestätigen deinen Platz vor dem Zahlungsschritt.</p>
+              <p class="fps-note" id="fpsNote">Diese Anfrage verpflichtet dich noch nicht zur Zahlung. Wir prüfen deine Anfrage und bestätigen deinen Platz vor dem Zahlungsschritt.</p>
             </div>
 
-            <button type="submit" class="btn-primary btn-form-submit">
+            <button type="submit" class="btn-primary btn-form-submit" id="formSubmitBtn">
               Platz anfragen
             </button>
 
@@ -1471,6 +1597,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=13"></script>
+  <script src="js/main.js?v=14"></script>
 </body>
 </html>

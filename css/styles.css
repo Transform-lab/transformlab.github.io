@@ -1786,3 +1786,22 @@ section { padding: 120px 0; }
 .field-error:focus {
   box-shadow: 0 0 0 3px rgba(224,85,85,.2);
 }
+
+/* ─── NURPLAN EXTRA FELDER ─── */
+.nurplan-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 8px 0 24px;
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.nurplan-divider::before,
+.nurplan-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}

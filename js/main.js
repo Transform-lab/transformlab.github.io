@@ -196,7 +196,7 @@
           window.location.href = stripeUrl;
         } else {
           btn.disabled = false;
-          btn.textContent = 'Meinen Platz anfragen — kostenlos & unverbindlich';
+          btn.textContent = (form.querySelector('input[name="plan"]:checked')?.value === 'nur_plan') ? 'Weiter zur Zahlung — 139 €' : 'Platz anfragen';
           alert('Fehler beim Senden. Bitte versuche es erneut.');
         }
       } catch {
@@ -208,9 +208,52 @@
   }
 
   /* ─── PLAN SELECTOR: pricing CTAs preseleccionan radio + precio dinámico ─── */
-  const planRadios   = document.querySelectorAll('input[name="plan"]');
-  const fpsLabel     = document.getElementById('fpsLabel');
-  const fpsTotal     = document.getElementById('fpsTotal');
+
+  // ⚠️ STRIPE: pega aquí el link de pago de Stripe para el plan de 139 €
+  const STRIPE_URL_NURPLAN = 'https://buy.stripe.com/bJedR9e1l73E7lc3Q2fnO02';
+  const DANKE_URL = 'https://www.transform-lab.de/danke.html';
+
+  const planRadios    = document.querySelectorAll('input[name="plan"]');
+  const fpsLabel      = document.getElementById('fpsLabel');
+  const fpsTotal      = document.getElementById('fpsTotal');
+  const fpsNote       = document.getElementById('fpsNote');
+  const formSubmitBtn = document.getElementById('formSubmitBtn');
+  const nurplanFields = document.getElementById('nurplan-fields');
+  const fMensajeWrap  = document.getElementById('f-mensaje-wrap');
+  const nextField     = form ? form.querySelector('input[name="_next"]') : null;
+
+  const nurplanRequiredNames = ['alter', 'groesse', 'gewicht_aktuell', 'gewicht_ziel', 'aktivitaet'];
+  const nurplanRequiredRadios = ['geschlecht', 'ernaehrung', 'trainingsort'];
+
+  function setNurplanMode(isNurplan) {
+    if (nurplanFields) nurplanFields.hidden = !isNurplan;
+    if (fMensajeWrap)  fMensajeWrap.style.display = isNurplan ? 'none' : '';
+
+    if (nurplanFields) {
+      nurplanRequiredNames.forEach(name => {
+        const el = nurplanFields.querySelector(`[name="${name}"]`);
+        if (el) { isNurplan ? el.setAttribute('required', '') : el.removeAttribute('required'); }
+      });
+      nurplanRequiredRadios.forEach(name => {
+        const first = nurplanFields.querySelector(`input[name="${name}"]`);
+        if (first) { isNurplan ? first.setAttribute('required', '') : first.removeAttribute('required'); }
+      });
+      const trainingstage = nurplanFields.querySelector('[name="trainingstage"]');
+      if (trainingstage) { isNurplan ? trainingstage.setAttribute('required', '') : trainingstage.removeAttribute('required'); }
+    }
+
+    if (nextField) nextField.value = isNurplan ? STRIPE_URL_NURPLAN : DANKE_URL;
+
+    if (formSubmitBtn) {
+      formSubmitBtn.textContent = isNurplan ? 'Weiter zur Zahlung — 139 €' : 'Platz anfragen';
+    }
+
+    if (fpsNote) {
+      fpsNote.textContent = isNurplan
+        ? 'Nach dem Absenden wirst du direkt zur sicheren Zahlung (Stripe) weitergeleitet.'
+        : 'Diese Anfrage verpflichtet dich noch nicht zur Zahlung. Wir prüfen deine Anfrage und bestätigen deinen Platz vor dem Zahlungsschritt.';
+    }
+  }
 
   function updatePriceSummary(value) {
     if (!fpsLabel || !fpsTotal) return;
@@ -229,7 +272,7 @@
   const subjectField = document.querySelector('input[name="_subject"]');
   function updateSubject(value) {
     if (!subjectField) return;
-    if (value === 'nur_plan')    subjectField.value = 'Neue Anfrage: Nur Plan (139 €)';
+    if (value === 'nur_plan')         subjectField.value = 'Neue Anfrage: Nur Plan (139 €)';
     else if (value === 'mit_kaution') subjectField.value = 'Neue Anfrage: Mit Kaution (259 €)';
   }
 
@@ -237,17 +280,20 @@
     radio.addEventListener('change', () => {
       updatePriceSummary(radio.value);
       updateSubject(radio.value);
+      setNurplanMode(radio.value === 'nur_plan');
     });
   });
 
   // CTAs de la sección pricing preseleccionan el plan y llevan al form
   document.querySelectorAll('.pc-cta[data-plan]').forEach(btn => {
-    btn.addEventListener('click', function(e) {
+    btn.addEventListener('click', function() {
       const planVal = this.dataset.plan;
       const radio = document.querySelector(`input[name="plan"][value="${planVal}"]`);
       if (radio) {
         radio.checked = true;
         updatePriceSummary(planVal);
+        updateSubject(planVal);
+        setNurplanMode(planVal === 'nur_plan');
       }
     });
   });
