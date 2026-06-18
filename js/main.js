@@ -226,8 +226,18 @@
     }
   }
 
+  const subjectField = document.querySelector('input[name="_subject"]');
+  function updateSubject(value) {
+    if (!subjectField) return;
+    if (value === 'nur_plan')    subjectField.value = 'Neue Anfrage: Nur Plan (139 €)';
+    else if (value === 'mit_kaution') subjectField.value = 'Neue Anfrage: Mit Kaution (259 €)';
+  }
+
   planRadios.forEach(radio => {
-    radio.addEventListener('change', () => updatePriceSummary(radio.value));
+    radio.addEventListener('change', () => {
+      updatePriceSummary(radio.value);
+      updateSubject(radio.value);
+    });
   });
 
   // CTAs de la sección pricing preseleccionan el plan y llevan al form
