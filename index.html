@@ -24,7 +24,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=Hanken+Grotesk:wght@300;400;500&display=swap"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=24">
+  <link rel="stylesheet" href="css/styles.css?v=25">
+
+  <link rel="preload" as="image" href="assets/escultura-transformacion.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/escultura-transformacion-mujer.webp" type="image/webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Transform·Lab",
+    "description": "8-Wochen Körpertransformationsprogramm mit rückerstattbarer Commitment-Kaution. Persönlicher Ernährungs- und Trainingsplan inklusive.",
+    "url": "https://www.transform-lab.de/",
+    "provider": {
+      "@type": "Person",
+      "name": "Gabriel Palosi",
+      "email": "hallo@transform-lab.de"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "60.00",
+      "priceCurrency": "EUR",
+      "description": "Einführungspreis. Zusätzlich 199 € rückerstattbare Commitment-Kaution."
+    },
+    "serviceType": "Fitness- und Ernährungscoaching",
+    "areaServed": "DE"
+  }
+  </script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -49,8 +75,14 @@
     <!-- HERO -->
     <section id="hero" aria-labelledby="hero-heading">
       <div class="hero-wipe" aria-hidden="true">
-        <img src="assets/escultura-transformacion.webp" alt="" class="hero-wipe-img hero-wipe-img--man">
-        <img src="assets/escultura-transformacion-mujer.webp" alt="" class="hero-wipe-img hero-wipe-img--woman">
+        <picture>
+          <source srcset="assets/escultura-transformacion.webp" type="image/webp">
+          <img src="assets/escultura-transformacion.png" alt="" class="hero-wipe-img hero-wipe-img--man" fetchpriority="high">
+        </picture>
+        <picture>
+          <source srcset="assets/escultura-transformacion-mujer.webp" type="image/webp">
+          <img src="assets/escultura-transformacion-mujer.png" alt="" class="hero-wipe-img hero-wipe-img--woman" fetchpriority="high">
+        </picture>
         <div class="hero-wipe-line"></div>
       </div>
       <div class="hero-bg"   aria-hidden="true"></div>
@@ -100,15 +132,15 @@
             <ul class="hero-trust" aria-label="Programmgarantien">
               <li>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Realistische Ziele
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Wöchentliches Tracking
+                Realistische Ziele · Wöchentliches Tracking
               </li>
               <li>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                 Kaution je nach Zielerreichung rückerstattbar
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Fragen? <a href="mailto:hallo@transform-lab.de" style="color:var(--green-light);text-decoration:none">hallo@transform-lab.de</a>
               </li>
             </ul>
           </div>
@@ -677,10 +709,16 @@
           <div class="avatar-card">
             <div class="avatar-card-inner">
               <div class="avatar-card-front">
-                <img src="assets/atleta-hombre.webp" alt="" class="emotional-img" loading="lazy">
+                <picture>
+                  <source srcset="assets/atleta-hombre.webp" type="image/webp">
+                  <img src="assets/atleta-hombre.png" alt="" class="emotional-img" loading="lazy">
+                </picture>
               </div>
               <div class="avatar-card-back">
-                <img src="assets/atleta-mujer.webp" alt="" class="emotional-img" loading="lazy">
+                <picture>
+                  <source srcset="assets/atleta-mujer.webp" type="image/webp">
+                  <img src="assets/atleta-mujer.png" alt="" class="emotional-img" loading="lazy">
+                </picture>
               </div>
             </div>
           </div>
@@ -715,8 +753,14 @@
 
         <div class="elige-center">
           <div class="elige-img-wrap" aria-hidden="true">
-            <img src="assets/escultura-transformacion.webp" alt="" class="elige-img elige-img--man">
-            <img src="assets/escultura-transformacion-mujer.webp" alt="" class="elige-img elige-img--woman">
+            <picture>
+              <source srcset="assets/escultura-transformacion.webp" type="image/webp">
+              <img src="assets/escultura-transformacion.png" alt="" class="elige-img elige-img--man" loading="lazy">
+            </picture>
+            <picture>
+              <source srcset="assets/escultura-transformacion-mujer.webp" type="image/webp">
+              <img src="assets/escultura-transformacion-mujer.png" alt="" class="elige-img elige-img--woman" loading="lazy">
+            </picture>
             <div class="wipe-line"></div>
           </div>
           <p class="elige-sub" id="elige-heading">
@@ -1019,6 +1063,21 @@
           </div>
 
           <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-0">
+              Für wen ist das Programm geeignet?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-0" role="region">
+              <div class="faq-answer-inner">
+                Das Programm richtet sich an gesunde Erwachsene ab 18 Jahren,
+                die ihr Körpergewicht kontrolliert verändern möchten. Es ist nicht
+                geeignet bei aktiven Essstörungen, Schwangerschaft oder schweren
+                Erkrankungen ohne ärztliche Freigabe.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-10">
               Ich will kein Geld riskieren. Warum sollte ich das machen?
               <span class="faq-icon" aria-hidden="true">+</span>
@@ -1226,6 +1285,11 @@
           <input type="hidden" name="_next" value="https://www.transform-lab.de/danke.html">
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
+          <div class="form-age-notice" role="note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Dieses Programm richtet sich ausschließlich an Personen ab 18 Jahren.
+          </div>
+
           <fieldset class="form-block">
             <legend class="form-block-title" style="border:none;padding:0;margin-bottom:24px;font-size:1rem">
               Deine Kontaktdaten
@@ -1362,6 +1426,9 @@
         Transform<span>·</span>Lab
       </a>
       <p>© 2026 Transform·Lab · Körpertransformationsprogramm mit rückerstattbarer Kaution</p>
+      <p style="font-size:13px;margin-top:6px;">
+        <a href="mailto:hallo@transform-lab.de" style="color:var(--green-light);text-decoration:none">hallo@transform-lab.de</a>
+      </p>
       <p style="font-size:12px; margin-top:8px;">
         <a href="impressum.html" style="color:var(--text-muted)">Impressum</a>
         &nbsp;·&nbsp;

@@ -1650,6 +1650,22 @@ section { padding: 120px 0; }
 /* ─── FORM REQUIRED MARKER ─── */
 .form-required { color: var(--green-light); font-weight: 400; }
 
+/* ─── FORM AGE NOTICE ─── */
+.form-age-notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+.form-age-notice svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; }
+
 /* ─── FIELD VALIDATION ERROR ─── */
 .field-error {
   border-color: #e05555 !important;

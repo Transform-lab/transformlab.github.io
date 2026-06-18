@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=22">
+  <link rel="stylesheet" href="css/styles.css?v=25">
   <style>
     .danke-page {
       min-height: 100vh;
@@ -18,61 +18,60 @@
       padding: 120px 24px 80px;
     }
     .danke-inner {
-      max-width: 640px;
+      max-width: 600px;
       text-align: center;
     }
     .danke-icon {
-      width: 80px; height: 80px;
+      width: 72px; height: 72px;
       border-radius: 50%;
       background: var(--green-dim);
       display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 40px;
+      margin: 0 auto 36px;
       border: 1px solid var(--green);
     }
-    .danke-icon svg {
-      width: 36px; height: 36px;
-      color: var(--green-light);
-    }
-    .danke-inner h1 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      margin-bottom: 20px;
-    }
+    .danke-icon svg { width: 32px; height: 32px; color: var(--green-light); }
+    .danke-inner h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 16px; }
     .danke-inner .lead {
-      font-size: 16px;
-      line-height: 1.8;
-      color: var(--text-muted);
-      margin-bottom: 48px;
+      font-size: 16px; line-height: 1.8;
+      color: var(--text-muted); margin-bottom: 40px;
     }
+    .danke-inner .lead strong { color: var(--text); }
     .next-steps {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 32px;
-      margin-bottom: 40px;
+      overflow: hidden;
+      margin-bottom: 32px;
       text-align: left;
     }
-    .next-steps h3 {
-      font-size: 1rem;
-      color: var(--text);
-      margin-bottom: 20px;
-      font-family: var(--font-display);
+    .ns-header {
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid var(--border);
     }
-    .next-steps ol {
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
+    .ns-header h3 {
+      font-size: 1rem; font-family: var(--font-display);
+      color: var(--text); margin: 0;
     }
-    .next-steps li {
-      color: var(--text-muted);
-      font-size: 14px;
-      line-height: 1.6;
+    .ns-step {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
     }
-    .next-steps li strong { color: var(--text); }
-    .danke-cta {
-      display: inline-block;
-      margin-top: 8px;
+    .ns-step:last-child { border-bottom: none; }
+    .ns-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--green-dim); border: 1px solid var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 500; color: var(--green-light);
+      flex-shrink: 0; margin-top: 2px;
     }
+    .ns-content strong { display: block; font-size: 14px; color: var(--text); margin-bottom: 3px; }
+    .ns-content p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+    .danke-contact {
+      font-size: 13px; color: var(--text-dim); margin-bottom: 28px;
+    }
+    .danke-contact a { color: var(--green-light); text-decoration: none; }
+    .danke-cta { display: inline-block; }
   </style>
 </head>
 <body>
@@ -81,7 +80,6 @@
     <nav class="site-nav scrolled" aria-label="Navigation">
       <div class="nav-inner">
         <a href="index.html" class="logo">Transform<span>·</span>Lab</a>
-        <a href="index.html#form" class="nav-cta">Platz sichern</a>
       </div>
     </nav>
   </header>
@@ -96,23 +94,52 @@
           </svg>
         </div>
 
-        <h1>Danke. Deine Anfrage wurde erhalten.</h1>
+        <h1>Anfrage erhalten. Danke.</h1>
 
         <p class="lead">
-          Wir haben deine Angaben erhalten und melden uns innerhalb von
-          <strong>24–48 Stunden</strong> bei dir. Bitte überprüfe deinen Posteingang
-          (und den Spam-Ordner) für eine Bestätigungsemail von uns.
+          Deine Angaben sind bei uns angekommen.
+          Ich melde mich persönlich innerhalb von <strong>24 Stunden</strong> bei dir —
+          schau auch in den Spam-Ordner.
         </p>
 
         <div class="next-steps">
-          <h3>Was passiert jetzt?</h3>
-          <ol>
-            <li><strong>Wir überprüfen deine Anfrage</strong> — wir prüfen, ob das Programm für deine Ziele und deinen Ausgangspunkt geeignet ist.</li>
-            <li><strong>Du erhältst eine Rückmeldung</strong> — entweder eine Bestätigung deines Platzes oder eine Nachricht mit weiteren Fragen.</li>
-            <li><strong>Zielvereinbarung</strong> — gemeinsam legen wir dein Wochenziel, die Messmethode und die Kaution-Bedingungen schriftlich fest.</li>
-            <li><strong>Programmstart</strong> — du erhältst deinen persönlichen Ernährungs- und Trainingsplan ab Tag 1.</li>
-          </ol>
+          <div class="ns-header">
+            <h3>Was passiert als nächstes</h3>
+          </div>
+          <div class="ns-step">
+            <div class="ns-num">1</div>
+            <div class="ns-content">
+              <strong>Ich prüfe deine Anfrage</strong>
+              <p>Ich schaue mir dein Ziel und deinen Ausgangspunkt an — ob das Programm für dich passt.</p>
+            </div>
+          </div>
+          <div class="ns-step">
+            <div class="ns-num">2</div>
+            <div class="ns-content">
+              <strong>Du bekommst eine persönliche Antwort</strong>
+              <p>Entweder eine Bestätigung deines Platzes oder ein paar kurze Rückfragen.</p>
+            </div>
+          </div>
+          <div class="ns-step">
+            <div class="ns-num">3</div>
+            <div class="ns-content">
+              <strong>Wir vereinbaren dein Ziel</strong>
+              <p>Gemeinsam legen wir Ziel, Messmethode und Kaution-Bedingungen schriftlich fest. Keine Überraschungen.</p>
+            </div>
+          </div>
+          <div class="ns-step">
+            <div class="ns-num">4</div>
+            <div class="ns-content">
+              <strong>Programmstart</strong>
+              <p>Du erhältst deinen persönlichen Ernährungs- und Trainingsplan ab Tag 1. Die 8 Wochen beginnen.</p>
+            </div>
+          </div>
         </div>
+
+        <p class="danke-contact">
+          Fragen in der Zwischenzeit?
+          <a href="mailto:hallo@transform-lab.de">hallo@transform-lab.de</a>
+        </p>
 
         <a href="index.html" class="btn-secondary danke-cta">← Zurück zur Startseite</a>
 
@@ -123,7 +150,10 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <a href="index.html" class="logo" style="font-size:12px;letter-spacing:.15em">Transform<span>·</span>Lab</a>
-      <p>© 2026 Transform·Lab · <a href="impressum.html" style="color:var(--text-muted)">Impressum</a> · <a href="datenschutz.html" style="color:var(--text-muted)">Datenschutz</a></p>
+      <p>© 2026 Transform·Lab ·
+        <a href="impressum.html" style="color:var(--text-muted)">Impressum</a> ·
+        <a href="datenschutz.html" style="color:var(--text-muted)">Datenschutz</a>
+      </p>
     </div>
   </footer>
 
