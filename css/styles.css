@@ -1789,6 +1789,115 @@ section { padding: 120px 0; }
   box-shadow: 0 0 0 3px rgba(224,85,85,.2);
 }
 
+/* ─── ERGEBNISSE / TESTIMONIALS ─── */
+#ergebnisse {
+  padding: 100px 0;
+}
+.ergebnisse-intro {
+  max-width: 560px;
+  margin: 20px auto 56px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.ergebnisse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.ergebnis-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: border-color .3s ease, transform .3s ease;
+}
+.ergebnis-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-3px);
+}
+.ergebnis-card--placeholder {
+  background: transparent;
+  border: 1px dashed var(--border-light);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 240px;
+}
+.ec-stars {
+  display: flex;
+  gap: 3px;
+  color: var(--gold);
+  font-size: 14px;
+}
+.ec-quote {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  font-style: italic;
+  flex: 1;
+}
+.ec-result {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--green-light);
+  letter-spacing: -.02em;
+  line-height: 1;
+}
+.ec-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.ec-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+.ec-detail {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.ec-refund {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 500;
+}
+.ep-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+  opacity: .4;
+}
+.ep-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.ep-sub {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+.ergebnisse-cta {
+  text-align: center;
+  margin-top: 48px;
+}
+.ergebnisse-cta p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 12px;
+}
+
 /* ─── NURPLAN EXTRA FELDER ─── */
 .nurplan-divider {
   display: flex;
