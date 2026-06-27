@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=Hanken+Grotesk:wght@300;400;500&display=swap"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=30">
+  <link rel="stylesheet" href="css/styles.css?v=31">
 
   <link rel="preload" as="image" href="assets/escultura-transformacion.webp" type="image/webp">
   <link rel="preload" as="image" href="assets/escultura-transformacion-mujer.webp" type="image/webp">
@@ -410,17 +410,22 @@
 
           <!-- PLAN OHNE KAUTION -->
           <div class="pc-card reveal">
+            <div class="pc-badge-top pc-badge-top--alt">Flexible Alternative</div>
             <div>
-              <div class="pc-label">Ohne Kaution</div>
+              <div class="pc-label">Nur Plan</div>
               <h3 class="pc-title">Nur Plan</h3>
               <div class="pc-price">139<span>€</span></div>
-              <div class="pc-price-note">Einmalige Zahlung · Kein Rückgabe-System</div>
+              <div class="pc-price-note">139 € einmalig · Flexible Alternative · Ohne Kautionssystem</div>
             </div>
             <ul class="pc-list">
+              <li class="pc-list-section">Enthalten:</li>
               <li class="pc-item pc-item--yes">Persönlicher Ernährungsplan</li>
               <li class="pc-item pc-item--yes">Angepasster Trainingsplan</li>
-              <li class="pc-item pc-item--no">Wöchentliches Check-in</li>
-              <li class="pc-item pc-item--no">Kaution &amp; Rückerstattung</li>
+              <li class="pc-item pc-item--yes">Start-Empfehlungen</li>
+              <li class="pc-list-section pc-list-section--no">Nicht enthalten:</li>
+              <li class="pc-item pc-item--no">Kein wöchentliches Check-in</li>
+              <li class="pc-item pc-item--no">Keine Kaution</li>
+              <li class="pc-item pc-item--no">Keine Rückerstattung</li>
             </ul>
             <a href="#form" class="btn-secondary pc-cta" data-plan="nur_plan">Plan anfragen</a>
           </div>
@@ -437,21 +442,24 @@
           <div class="pc-card pc-card--featured reveal reveal-delay-2">
             <div class="pc-badge-top">Empfohlen</div>
             <div>
-              <div class="pc-label">Mit Commitment-Kaution</div>
-              <h3 class="pc-title">Komplettpaket</h3>
+              <div class="pc-label">Das Hauptprogramm von Transform·Lab</div>
+              <h3 class="pc-title">Challenge mit Kaution</h3>
               <div class="pc-price">60<span>€</span> <small>+ 199 € Kaution</small></div>
-              <div class="pc-price-note">Effektive Kosten: ab 60 € bei Zielerreichung</div>
+              <div class="pc-price-note">Das Hauptprogramm · 8 Wochen Commitment</div>
             </div>
             <ul class="pc-list">
+              <li class="pc-list-section">Enthalten:</li>
               <li class="pc-item pc-item--yes">Persönlicher Ernährungsplan</li>
               <li class="pc-item pc-item--yes">Angepasster Trainingsplan</li>
               <li class="pc-item pc-item--yes">Wöchentliches Check-in</li>
-              <li class="pc-item pc-item--yes">Anteilige Kautionsrückerstattung</li>
+              <li class="pc-item pc-item--yes">Rückerstattbare Kaution</li>
+              <li class="pc-item pc-item--yes">Bis zu 199 € zurück</li>
             </ul>
             <div class="pc-callout">
               <strong>Bis zu 199 € zurück</strong>
               Jede erfüllte Woche bringt dir 25 € zurück. Alle 8 Wochen: volle Rückerstattung.
             </div>
+            <p class="pc-microcopy">Die Kaution ist nicht der Programmpreis. Sie wird anteilig zurückgezahlt, wenn du deine vereinbarten Wochenziele erreichst.</p>
             <a href="#form" class="btn-primary pc-cta" data-plan="mit_kaution">Platz sichern</a>
           </div>
 
@@ -1072,14 +1080,28 @@
 
           <div class="faq-item" role="listitem">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
-              Ist die Kaution Pflicht?
+              Gilt die Kaution für beide Pläne?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-6" role="region">
               <div class="faq-answer-inner">
-                Ja. Die Kaution ist ein wesentlicher Teil des Commitment-Systems.
-                Ohne sie funktioniert das Programm nicht wie vorgesehen. Sie ist das,
-                was Absicht in echtes Engagement verwandelt.
+                Nein. Die Kaution gilt nur für die Challenge mit Kaution. Wenn du ohne Kaution starten möchtest,
+                kannst du den Nur Plan für 139 € wählen. Bei der Challenge ist die Kaution ein wesentlicher
+                Teil des Systems, weil sie dein Commitment über 8 Wochen sichtbar macht.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6b">
+              Welcher Plan passt besser zu mir?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-6b" role="region">
+              <div class="faq-answer-inner">
+                Wenn du einfach einen klaren Ernährungs- und Trainingsplan möchtest, ist der Nur Plan die flexible Option.
+                Wenn du nicht nur starten, sondern über 8 Wochen verbindlich dranbleiben willst,
+                ist die Challenge mit Kaution das Hauptprogramm von Transform·Lab.
               </div>
             </div>
           </div>
