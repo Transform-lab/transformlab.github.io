@@ -1802,6 +1802,13 @@ section { padding: 120px 0; }
 .field-error:focus {
   box-shadow: 0 0 0 3px rgba(224,85,85,.2);
 }
+.checkbox-error .checkbox-custom {
+  border-color: #e05555;
+  box-shadow: 0 0 0 3px rgba(224,85,85,.15);
+}
+.checkbox-error .checkbox-label {
+  color: #e05555;
+}
 
 /* ─── ERGEBNISSE / TESTIMONIALS ─── */
 #ergebnisse {

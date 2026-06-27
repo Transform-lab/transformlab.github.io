@@ -154,11 +154,25 @@
   if (form) {
     /* Real-time validation: highlight required fields on blur */
     form.querySelectorAll('input[required], select[required], textarea[required]').forEach(field => {
+      if (field.type === 'checkbox' || field.type === 'radio') return;
       field.addEventListener('blur', () => {
-        const invalid = !field.value.trim();
-        field.classList.toggle('field-error', invalid);
+        field.classList.toggle('field-error', !field.value.trim());
       });
       field.addEventListener('input', () => field.classList.remove('field-error'));
+      field.addEventListener('change', () => field.classList.remove('field-error'));
+    });
+
+    /* Checkbox refs — defined here so both submit and change listeners can use them */
+    const saludConsent = form.querySelector('#f-salud-consent');
+    const avisoMedico  = form.querySelector('#f-aviso');
+    const agbConsent   = form.querySelector('#f-agb');
+    const checkboxesToValidate = [saludConsent, avisoMedico, agbConsent];
+
+    /* Auto-clear checkbox error when user checks it */
+    checkboxesToValidate.forEach(cb => {
+      if (cb) cb.addEventListener('change', () => {
+        if (cb.checked) cb.closest('.form-checkbox').classList.remove('checkbox-error');
+      });
     });
 
     form.addEventListener('submit', async function(e) {
@@ -166,18 +180,30 @@
       const btn = form.querySelector('button[type="submit"]');
       const stripeUrl = form.querySelector('input[name="_next"]').value;
 
-      /* Validate required checkboxes */
-      const saludConsent = form.querySelector('#f-salud-consent');
-      const avisoMedico  = form.querySelector('#f-aviso');
-      const agbConsent   = form.querySelector('#f-agb');
-      const checkboxesToValidate = [saludConsent, avisoMedico, agbConsent];
-      for (const cb of checkboxesToValidate) {
-        if (cb && !cb.checked) {
-          cb.closest('.form-checkbox').scrollIntoView({ behavior: 'smooth', block: 'center' });
-          cb.closest('.form-checkbox').style.outline = '2px solid #e05555';
-          setTimeout(() => { cb.closest('.form-checkbox').style.outline = ''; }, 3000);
-          return;
+      /* Validate ALL required fields and mark every error */
+      let firstError = null;
+      let hasErrors  = false;
+
+      form.querySelectorAll('input[required]:not([type="checkbox"]):not([type="radio"]), select[required], textarea[required]').forEach(field => {
+        if (!field.value.trim()) {
+          field.classList.add('field-error');
+          hasErrors = true;
+          if (!firstError) firstError = field;
         }
+      });
+
+      checkboxesToValidate.forEach(cb => {
+        if (cb && !cb.checked) {
+          const wrap = cb.closest('.form-checkbox');
+          wrap.classList.add('checkbox-error');
+          hasErrors = true;
+          if (!firstError) firstError = wrap;
+        }
+      });
+
+      if (hasErrors) {
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
       }
 
       btn.disabled = true;
