@@ -250,6 +250,9 @@
   const nurplanRequiredNames = ['alter', 'groesse', 'gewicht_aktuell', 'gewicht_ziel', 'aktivitaet'];
   const nurplanRequiredRadios = ['geschlecht', 'ernaehrung', 'trainingsort'];
 
+  const formHeading    = document.getElementById('form-heading');
+  const formMicrocopy  = document.getElementById('formMicrocopy');
+
   function setNurplanMode(isNurplan) {
     if (nurplanFields) nurplanFields.hidden = !isNurplan;
     if (fMensajeWrap)  fMensajeWrap.style.display = isNurplan ? 'none' : '';
@@ -273,16 +276,22 @@
       formSubmitBtn.textContent = isNurplan ? 'Kostenpflichtig bestellen — 139 €' : 'Platz anfragen';
     }
 
-    if (fpsNote) {
-      fpsNote.textContent = isNurplan
-        ? 'Nach dem Absenden wirst du direkt zur sicheren Zahlung (Stripe) weitergeleitet.'
-        : 'Diese Anfrage verpflichtet dich noch nicht zur Zahlung. Wir prüfen deine Anfrage und bestätigen deinen Platz vor dem Zahlungsschritt.';
+    if (formHeading) {
+      formHeading.textContent = isNurplan ? 'Deine Angaben für den Nur Plan' : 'Challenge unverbindlich anfragen';
     }
 
     if (formIntro) {
       formIntro.textContent = isNurplan
-        ? 'Füll das Formular aus und wir erstellen deinen Plan. Die Zahlung erfolgt direkt im nächsten Schritt.'
-        : 'Kein langer Fragebogen. Wir melden uns innerhalb von 24 Stunden. Die Details klären wir persönlich vor dem Start.';
+        ? 'Nach dem Absenden wirst du zur sicheren Zahlung weitergeleitet. Nach erfolgreicher Zahlung prüfen wir deine Angaben und erstellen deinen individuellen Ernährungs- und Trainingsplan.'
+        : 'Wir prüfen deine Anfrage und melden uns innerhalb von 24 Stunden mit den nächsten Schritten. Es wird noch keine Zahlung ausgelöst.';
+    }
+
+    if (formMicrocopy) formMicrocopy.hidden = !isNurplan;
+
+    if (fpsNote) {
+      fpsNote.textContent = isNurplan
+        ? 'Nach dem Absenden wirst du direkt zur sicheren Zahlung (Stripe) weitergeleitet.'
+        : 'Diese Anfrage verpflichtet dich noch nicht zur Zahlung. Wir prüfen deine Anfrage und bestätigen deinen Platz vor dem Zahlungsschritt.';
     }
   }
 
