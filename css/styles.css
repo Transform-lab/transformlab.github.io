@@ -197,7 +197,7 @@ section { padding: 120px 0; }
   .hero-wipe-line       { display: none; }
 }
 @media (max-width: 768px) {
-  .hero-wipe-img--woman { animation: heroFadeMobile 8s ease-in-out infinite; clip-path: none; }
+  .hero-wipe-img--woman { animation: heroSlideUpMobile 8s ease-in-out infinite; clip-path: none; }
   .hero-wipe-line { display: none; }
 }
 @media (max-width: 768px) and (prefers-reduced-motion: reduce) {
@@ -1025,6 +1025,14 @@ section { padding: 120px 0; }
   90%  { left: 2%;   opacity: 1; }
   92%  { left: 0%;   opacity: 0; }
   100% { left: 0%;   opacity: 0; }
+}
+@keyframes heroSlideUpMobile {
+  0%   { transform: translateY(100%); }
+  8%   { transform: translateY(100%); }
+  42%  { transform: translateY(0%); }
+  58%  { transform: translateY(0%); }
+  92%  { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
 }
 @keyframes heroFadeMobile {
   0%   { opacity: 0; }
