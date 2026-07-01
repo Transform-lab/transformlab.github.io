@@ -1994,23 +1994,6 @@ section { padding: 120px 0; }
 }
 
 /* ─────────────────────────────
-   HERO VIDEO BACKGROUND
-───────────────────────────── */
-.hero-video-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.18;
-  z-index: 0;
-  pointer-events: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-video-bg { display: none; }
-}
-
-/* ─────────────────────────────
    MICRO-INTERACCIONES HOVER
    (refuerzo — los elementos ya tienen transition base)
 ───────────────────────────── */
